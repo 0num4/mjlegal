@@ -202,7 +202,7 @@ class PossibleActionGenerator :
                 if not(prev_actor_state.is_reach) and prev_actor_state.is_menzen and prev_actor_state.score >= 1000:
                     tiles = prev_actor_state.tehai
                     tiles34 = TilesUtil.tiles_to_tiles34(tiles)
-                    tenpai_tiles_34 = self.get_tenpai_tile(tiles34)
+                    tenpai_tiles_34 = self._get_tenpai_tile(tiles34)
                     if sum(tenpai_tiles_34) > 0 :
                         tenpai_dahais = TilesUtil.find_tiles_34_in_tiles(tiles, tenpai_tiles_34)
                         for dahai in tenpai_dahais :
@@ -234,7 +234,7 @@ class PossibleActionGenerator :
                 player_state = game_state.player_states[actor]
                 is_riichi= player_state.is_reach
                 player_wind = game_state.player_wind(actor)
-                hand_config = self.make_hand_config(is_tsumo   = is_tsumo,
+                hand_config = self._make_hand_config(is_tsumo   = is_tsumo,
                                                     is_riichi  = is_riichi,
                                                     is_ippatsu = False,
                                                     is_rinshan = is_rinshan,
@@ -273,7 +273,7 @@ class PossibleActionGenerator :
             is_agari = hand_value.cost is not None
         return is_agari
 
-    def get_machi(self, tiles_34) :
+    def _get_machi(self, tiles_34) :
         tile_count = sum(tiles_34)
         assert tile_count < 14 and tile_count % 2 == 1
 
@@ -286,18 +286,18 @@ class PossibleActionGenerator :
                     machi_tiles_34[i] = 1
         return machi_tiles_34
 
-    def get_tenpai_tile(self, tiles_34) :
+    def _get_tenpai_tile(self, tiles_34) :
         tenpai_tiles_34 = [0] * 34
         for i in range(0,34) :
             temp_tiles = copy.copy(tiles_34)
             if temp_tiles[i] > 0 :
                 temp_tiles[i] -= 1
-                machi_tiles_34 = self.get_machi(temp_tiles)
+                machi_tiles_34 = self._get_machi(temp_tiles)
                 if sum(machi_tiles_34) > 0 :
                     tenpai_tiles_34[i] = 1
         return tenpai_tiles_34
 
-    def make_hand_config(self,
+    def _make_hand_config(self,
         is_tsumo=False,
         is_riichi=False,
         is_ippatsu=False,
