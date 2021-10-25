@@ -11,6 +11,7 @@ class Action :
     tile : Tile = None
     consumed : list = None
     tsumogiri : bool = False
+    rinshan   : bool = False
 
     def to_mjai(self) :
         res = {
@@ -25,6 +26,8 @@ class Action :
             res["consumed"] = [tile.to_str() for tile in self.consumed]
         if self.type == ActionType.DAHAI :
             res["tsumogiri"] = self.tsumogiri
+        if self.type == ActionType.TSUMO :
+            res["rinshan"] = self.rinshan
         return res
 
     def to_str(self) :

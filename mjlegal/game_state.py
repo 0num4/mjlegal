@@ -47,4 +47,8 @@ class GameState :
             previous_player_id = self.previous_action.actor
             return self.player_states[previous_player_id]
 
+    def player_wind(self, player_id) :
+        winds = ["E", "S", "W", "N"]
+        return winds[(player_id + self.oya) % 4]
+
     

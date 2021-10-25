@@ -3,6 +3,8 @@ from .mjtypes import Tile
 from .mjtypes import Meld
 
 from .mjtypes import TilesUtil
+from .mjtypes import ActionType
+from .action import Action
 
 class PlayerState :
     def __init__(self) :
@@ -19,7 +21,7 @@ class PlayerState :
         self.jun = 0 # 九種九牌, ダブリー, 海底チェック用
         self.sutehais = [] # 河(鳴かれた牌を含む)
         self.ho = [] # 河(鳴かれた牌を含まない)
-        
+        self.prev_action = None
         self.melds = []
         self.tsumo_tile = None
     
@@ -95,6 +97,9 @@ class PlayerState :
         assert self.tsumo_tile is None, "Too many tsumo."
         tile = Tile.from_str(pai)
         self.tsumo_tile = tile
+        rinshan = False if self.prev_action is None else self.prev_action.type in (ActionType.ANKAN, ActionType.KAKAN, ActionType.DAIMINKAN, ActionType.NUKI)
+        self.prev_action = Action(type = ActionType.TSUMO, actor = self.player_id, tile = tile, rinshan = rinshan)
+        return self.prev_action
 
     def dahai(self, pai, reach_declear = False) :
         tile = Tile.from_str(pai)
@@ -103,6 +108,8 @@ class PlayerState :
         self.ho.append(sutehai)
         if reach_declear :
             self.reach_ho_index = len(self.ho)
+        self.prev_action = Action(type = ActionType.DAHAI, actor = self.player_id, tile = tile)
+        return self.prev_action
         
     def pon(self, pai, consumed, from_id):
         consumed_tiles = [Tile.from_str(ts) for ts in consumed]
@@ -112,7 +119,9 @@ class PlayerState :
 
         meld = Meld(meld_type=Meld.PON, tiles=consumed_tiles + [tile], from_who=from_id)
         self.melds.append(meld)
-    
+        self.prev_action = Action(type = ActionType.PON, actor = self.player_id, target = from_id, tile = tile, consumed = consumed_tiles)
+        return self.prev_action
+
     def chi(self, pai, consumed, from_id) :
         consumed_tiles = [Tile.from_str(ts) for ts in consumed]
         tile = Tile.from_str(pai)
@@ -121,6 +130,8 @@ class PlayerState :
 
         meld = Meld(meld_type=Meld.CHI, tiles=consumed_tiles + [tile], from_who=from_id)
         self.melds.append(meld)
+        self.prev_action = Action(type = ActionType.CHI, actor = self.player_id, target = from_id, tile = tile, consumed = consumed_tiles)
+        return self.prev_action
 
     def ankan(self, consumed):
         consumed_tiles = [Tile.from_str(tile) for tile in consumed]
@@ -128,6 +139,8 @@ class PlayerState :
             self.remove_tile(t)
         meld = Meld(meld_type = Meld.ANKAN, tiles = consumed_tiles)
         self.melds.append(meld)
+        self.prev_action = Action(type = ActionType.ANKAN, actor = self.player_id, target = self.player_id, tile = consumed_tiles[0], consumed = consumed_tiles)
+        return self.prev_action
 
     def kakan(self, pai):
         tile = Tile.from_str(pai)
@@ -141,6 +154,8 @@ class PlayerState :
         tiles = pon_meld.tiles + [tile]
         kan_meld = Meld(meld_type = Meld.KAKAN, tiles = tiles, from_who = pon_meld.from_who)
         self.melds[pon_idx] = kan_meld
+        self.prev_action = Action(type = ActionType.KAKAN, actor = self.player_id, target = self.player_id, tile = tile)
+        return self.prev_action
 
     def daiminkan(self, pai, consumed, from_id):
         consumed_tiles = [Tile.from_str(ts) for ts in consumed]
@@ -150,12 +165,16 @@ class PlayerState :
 
         meld = Meld(meld_type=Meld.DAIMINKAN, tiles=consumed_tiles + [tile], from_who=from_id)
         self.melds.append(meld)
+        self.prev_action = Action(type = ActionType.DAIMINKAN, actor = self.player_id, target = from_id, tile = tile, consumed = consumed_tiles)
+        return self.prev_action
 
     def nukidora(self, pai) :
         tile = Tile.from_str(pai)
         self.remove_tile(tile)
         nukidora_meld = Meld(Meld.NUKI, tiles = [tile])
         self.melds.append(nukidora_meld)
+        self.prev_action = Action(type = ActionType.NUKI, actor = self.player_id, target = self.player_id, tile = tile)
+        return self.prev_action
         
     def dump(self) :
         return {'tiles' : TilesUtil.tiles_to_str(self._tiles), 'tsumo':self.tsumo_tile, 'ho' : TilesUtil.tiles_to_str(self.ho), 'melds' : self.melds}

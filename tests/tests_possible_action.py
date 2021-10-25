@@ -167,7 +167,6 @@ class TestPossibleAction(unittest.TestCase) :
 
         pag = PossibleActionGenerator()
         hora_tsumo = pag.possible_actions_hora(game_state)
-        print(hora_tsumo)
 
         expect = [{"type": "hora", "actor": 0, "target": 0, "pai": "9s"}]
         horas_mjai = [act.to_mjai() for act in hora_tsumo]
@@ -177,20 +176,18 @@ class TestPossibleAction(unittest.TestCase) :
 
     def test_possible_actions_hora_ron(self) :
         mjai_log = [{"type":"start_game","names":["shanten","shanten","shanten"]},
-                    {"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"8p","tehais":[["1m","2m","3m","4p","0p","6p","5s","7s","7s","8s","8s","9s","N"],["9m","1p","2p","3s","3s","3s","4s","8s","9s","S","W","P","P"],["1m","1p","4p","6p","7p","1s","2s","4s","4s","7s","9s","S","S"]]},
-                    {"type":"tsumo","actor":0,"pai":"N"},
-                    {"type":"dahai","actor":0,"pai":"5s" , "tsumogiri" : False},
+                    {"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"8p","tehais":[["1m","2m","3m","4p","0p","6p","2s","2s","4s","E","E","E","N"],["4m","5m","6m","3s","3s","3s","7s","8s","S","S","S","N","N"],["1m","1p","4p","6p","7p","1s","2s","4s","4s","7s","9s","W","W"]]},
+                    {"type":"tsumo","actor":0,"pai":"5s"},
+                    {"type":"dahai","actor":0,"pai":"N" , "tsumogiri" : False},
                     {"type":"tsumo","actor":1,"pai":"1m"},
                     {"type":"dahai","actor":1,"pai":"1m" ,"tsumogiri" : True},
                     {"type":"tsumo","actor":2,"pai":"6s"},
                     {"type":"dahai","actor":2,"pai":"6s" ,"tsumogiri" : True},
                     ]
         game_state = loadGameStateFromMjai(mjai_log)
-
         pag = PossibleActionGenerator()
         hora_ron = pag.possible_actions_hora(game_state)
-        print(hora_ron)
-        expect = [{"type": "hora", "actor": 0, "target": 2, "pai": "6s"}]
+        expect = [{"type": "hora", "actor": 0, "target": 2, "pai": "6s"}, {"type": "hora", "actor": 1, "target": 2, "pai": "6s"}]
         horas_mjai = [act.to_mjai() for act in hora_ron]
         horas_json = json.dumps(horas_mjai)
         expect_json = json.dumps(expect)

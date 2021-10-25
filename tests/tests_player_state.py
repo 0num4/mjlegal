@@ -9,6 +9,7 @@ class TestPlayerState(unittest.TestCase) :
     def test_player_state(self) :
         tiles = TilesUtil.str_to_tiles("789m456p555s1123z")
         ps = PlayerState()
+        ps.player_id = 0
         ps.tiles = tiles
 
         self.assertEqual(TilesUtil.tiles_to_str(ps.tiles), "789m456p555s1123z")

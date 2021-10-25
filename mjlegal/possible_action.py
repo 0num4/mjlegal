@@ -3,15 +3,17 @@ import copy
 from mahjong.shanten import Shanten
 from mahjong.agari import Agari
 from mahjong.hand_calculating.hand import HandCalculator
+from mahjong.hand_calculating.hand_config import HandConfig, OptionalRules
+from mahjong.constants import EAST, SOUTH, WEST, NORTH
 
 from .game_state import GameState
 from .player_state import PlayerState
 from .mjtypes import Tile, Meld, TilesUtil
 from .mjtypes import ActionType
 from .action import Action
-from mahjong.hand_calculating.hand_config import HandConfig, OptionalRules
 
 class PossibleActionGenerator :
+    WINDS = {"E": EAST, "S" : SOUTH, "W" : WEST, "N" : NORTH}
     def __init__(self) :
         self.shanten = Shanten()
         self.agari  = Agari()
@@ -214,26 +216,14 @@ class PossibleActionGenerator :
         previous_action = game_state.previous_action
         if previous_action is not None  :
             is_tsumo=True
-            # is_ippatsu=is_ippatsu,
-            # is_rinshan=is_rinshan,
-            # is_chankan=is_chankan,
-            # is_haitei=is_haitei,
-            # is_houtei=is_houtei,
-            # is_daburu_riichi=is_daburu_riichi,
-            # is_nagashi_mangan=is_nagashi_mangan,
-            # is_tenhou=is_tenhou,
-            # is_renhou=is_renhou,
-            # is_chiihou=is_chiihou,
-            # player_wind=player_wind, # 自風
-            # round_wind=round_wind, # 場風
+            is_rinshan = False
             prev_type  = previous_action.type
             actors = []
-            
             if prev_type == ActionType.TSUMO :
                 player_id = previous_action.actor
                 actors.append(player_id)
                 target = player_id
-                
+                is_rinshan = previous_action.rinshan
             elif prev_type in (ActionType.DAHAI, ActionType.ANKAN, ActionType.KAKAN, ActionType.NUKI) :
                 is_tsumo=False
                 prev_actor = previous_action.actor
@@ -243,7 +233,21 @@ class PossibleActionGenerator :
             for actor in actors :
                 player_state = game_state.player_states[actor]
                 is_riichi= player_state.is_reach
-                hand_config = self.make_hand_config(is_tsumo = is_tsumo ,is_riichi=is_riichi)
+                player_wind = game_state.player_wind(actor)
+                hand_config = self.make_hand_config(is_tsumo   = is_tsumo,
+                                                    is_riichi  = is_riichi,
+                                                    is_ippatsu = False,
+                                                    is_rinshan = is_rinshan,
+                                                    is_chankan = False,
+                                                    is_haitei  = False,
+                                                    is_houtei  = False,
+                                                    is_daburu_riichi = False,
+                                                    is_nagashi_mangan = False,
+                                                    is_tenhou = False,
+                                                    is_renhou = False,
+                                                    is_chiihou = False,
+                                                    player_wind = PossibleActionGenerator.WINDS[player_wind],
+                                                    round_wind = PossibleActionGenerator.WINDS[game_state.bakaze])
 
                 if self._can_hora(game_state, player_state, previous_action.tile, hand_config) :
                     hora_action = Action(type = ActionType.HORA, 
