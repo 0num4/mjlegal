@@ -2,6 +2,7 @@ import unittest
 import json
 
 from mjlegal.mjai import MjaiLoader
+from mjlegal.mjai_player_loader import MjaiPlayerLoader
 
 SERVER_TO_CLIENT = 0
 CLIENT_TO_SERVER = 1
@@ -47,4 +48,14 @@ class TestMjaiLoader(unittest.TestCase) :
 
     def test_player_mjai_log_load_0(self) :
         records = load_mjai_player_records('./tests/test_data/test_mjai_player_log_01.txt')
+        mjaiPlayerLoader = MjaiPlayerLoader()
+        for record in records :
+            direction = record['direction']
+            ev = record['record']
+            if direction == SERVER_TO_CLIENT :
+                mjaiPlayerLoader.action_receive(ev)
+            elif direction == CLIENT_TO_SERVER :
+                mjaiPlayerLoader.action_send(ev)
+            else :
+                self.fail('Invalid mjai player record..')
 
