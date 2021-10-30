@@ -12,6 +12,7 @@ class GameState :
         self.chicha = 0 # 常に0
         self.num_initial_pipais = 0
         self.player_states = []
+        self.player_id = -1 # player log
 
     def start_kyoku(self) :
         self.oya = 0
