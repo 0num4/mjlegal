@@ -5,7 +5,6 @@ from .mjtypes import ActionType
 from .action import Action
 
 class MjaiLoader :
-    # LOOKUP_MJAI_TYPE_TO_ACTION_TYPE = {"tsumo" : ActionType.TSUMO, "dahai" : ActionType.DAHAI, "pon" : ActionType.PON, "chi" : ActionType.CHI, "ankan" : ActionType.ANKAN, "kakan" : ActionType.KAKAN, "daiminkan" : ActionType.DAIMINKAN, "nukidora" : ActionType.NUKI}
     def __init__(self) :
         self.game = None
         self.reach_dahai = False # 次の打牌が立直宣言牌
@@ -88,7 +87,10 @@ class MjaiLoader :
 
             elif action_type == "reach" :
                 self.reach_dahai = True
-            
-            # if action_type in self.LOOKUP_MJAI_TYPE_TO_ACTION_TYPE :
-            #     self.game.previous_action = Action(type = action_type, actor = action_actor)
+
+            elif action_type == "reach_accepted" :
+                if "scores" in action :
+                    self.game.set_scores(action["scores"])
+                elif "deltas" in action :
+                    self.game.set_delta_scores(action["deltas"])
             

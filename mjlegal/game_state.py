@@ -35,12 +35,12 @@ class GameState :
     def set_scores(self, scores) :
         assert len(scores) == len(self.player_states)
         for i, score in enumerate(scores) :
-            self.player_states[i] = score
+            self.player_states[i].score = score
 
     def set_delta_scores(self, delta_scores) :
         assert len(delta_scores) == len(self.player_states)
         for i, delta_score in enumerate(delta_scores) :
-            self.player_states[i] += delta_score
+            self.player_states[i].score += delta_score
 
     @property
     def previous_player(self) :
