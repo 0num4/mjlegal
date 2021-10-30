@@ -236,16 +236,16 @@ class PossibleActionGenerator :
                 player_wind = game_state.player_wind(actor)
                 hand_config = self._make_hand_config(is_tsumo   = is_tsumo,
                                                     is_riichi  = is_riichi,
-                                                    is_ippatsu = False,
+                                                    is_ippatsu = False,  # TODO ippatsu
                                                     is_rinshan = is_rinshan,
-                                                    is_chankan = False,
-                                                    is_haitei  = False,
-                                                    is_houtei  = False,
-                                                    is_daburu_riichi = False,
-                                                    is_nagashi_mangan = False,
-                                                    is_tenhou = False,
-                                                    is_renhou = False,
-                                                    is_chiihou = False,
+                                                    is_chankan = False, # TODO chankan
+                                                    is_haitei  = False, # TODO haitei
+                                                    is_houtei  = False, # TODO houtei
+                                                    is_daburu_riichi = False, # TODO double reach
+                                                    is_nagashi_mangan = False, # TODO nagashi mangan
+                                                    is_tenhou = False, # TODO tenhou
+                                                    is_renhou = False, # TODO renhou
+                                                    is_chiihou = False, # TODO chiihou
                                                     player_wind = PossibleActionGenerator.WINDS[player_wind],
                                                     round_wind = PossibleActionGenerator.WINDS[game_state.bakaze])
 
