@@ -1,23 +1,13 @@
-import copy
-
-from mahjong.shanten import Shanten
-from mahjong.agari import Agari
-from mahjong.hand_calculating.hand import HandCalculator
-from mahjong.hand_calculating.hand_config import HandConfig, OptionalRules
-from mahjong.constants import EAST, SOUTH, WEST, NORTH
-
 from .game_state import GameState
 from .player_state import PlayerState
 from .mjtypes import Tile, Meld, TilesUtil
 from .mjtypes import ActionType
 from .action import Action
+from .hand_tool import HandTool
 
 class PossibleActionGenerator :
-    WINDS = {"E": EAST, "S" : SOUTH, "W" : WEST, "N" : NORTH}
     def __init__(self) :
-        self.shanten = Shanten()
-        self.agari  = Agari()
-        self.hand = HandCalculator()
+        self.hand_tool = HandTool()
 
     def player_action_candidate(self, game_state : GameState) :
         candidate = []
@@ -201,14 +191,11 @@ class PossibleActionGenerator :
                 prev_actor_state = game_state.player_states[prev_actor]
                 if not(prev_actor_state.is_reach) and prev_actor_state.is_menzen and prev_actor_state.score >= 1000:
                     tiles = prev_actor_state.tehai
-                    tiles34 = TilesUtil.tiles_to_tiles34(tiles)
-                    tenpai_tiles_34 = self._get_tenpai_tile(tiles34)
-                    if sum(tenpai_tiles_34) > 0 :
-                        tenpai_dahais = TilesUtil.find_tiles_34_in_tiles(tiles, tenpai_tiles_34)
-                        for dahai in tenpai_dahais :
-                            reach_dahai_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
-                                        tile = dahai, tsumogiri = (prev_actor_state.tsumo_tile == dahai))
-                            actions.append(reach_dahai_action)
+                    tenpai_dahais = self.hand_tool.get_tenpai_tiles(tiles)
+                    for dahai in tenpai_dahais :
+                        reach_dahai_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
+                                    tile = dahai, tsumogiri = (prev_actor_state.tsumo_tile == dahai))
+                        actions.append(reach_dahai_action)
         return actions
 
     def possible_actions_hora(self, game_state):
@@ -231,116 +218,10 @@ class PossibleActionGenerator :
                 actors = filter(lambda id : id != prev_actor, range(0, game_state.num_players))
                 
             for actor in actors :
-                player_state = game_state.player_states[actor]
-                is_riichi= player_state.is_reach
-                player_wind = game_state.player_wind(actor)
-                hand_config = self._make_hand_config(is_tsumo   = is_tsumo,
-                                                    is_riichi  = is_riichi,
-                                                    is_ippatsu = False,  # TODO ippatsu
-                                                    is_rinshan = is_rinshan,
-                                                    is_chankan = False, # TODO chankan
-                                                    is_haitei  = False, # TODO haitei
-                                                    is_houtei  = False, # TODO houtei
-                                                    is_daburu_riichi = False, # TODO double reach
-                                                    is_nagashi_mangan = False, # TODO nagashi mangan
-                                                    is_tenhou = False, # TODO tenhou
-                                                    is_renhou = False, # TODO renhou
-                                                    is_chiihou = False, # TODO chiihou
-                                                    player_wind = PossibleActionGenerator.WINDS[player_wind],
-                                                    round_wind = PossibleActionGenerator.WINDS[game_state.bakaze])
-
-                if self._can_hora(game_state, player_state, previous_action.tile, hand_config) :
+                if self.hand_tool.can_hora(game_state, actor, previous_action.tile, is_tsumo, is_rinshan) :
                     hora_action = Action(type = ActionType.HORA, 
                                 actor = actor, target = target, 
                                 tile = previous_action.tile)
                     actions.append(hora_action)
         return actions
 
-    def _can_hora(self, game_state, player_state, win_tile, hand_config) :
-        tiles = player_state.tiles
-        tehai = tiles + [win_tile]
-        tiles34 = TilesUtil.tiles_to_tiles34(tehai)
-        is_agari = False
-        if self.agari.is_agari(tiles34) :
-            tiles136 = TilesUtil.tiles_to_tiles136(tiles)
-            tehai136 = TilesUtil.tiles_to_tiles136(tehai)
-            melds136 = player_state.melds136 if len(player_state.melds) > 0 else None
-            win_tile136_list = list(set(tehai136) - set(tiles136))
-            dora_ind = TilesUtil.tiles_to_tiles136(game_state.dora_markers)
-            hand_value = self.hand.estimate_hand_value(tiles = tehai136, win_tile = win_tile136_list[0],
-                                            melds = melds136, dora_indicators = dora_ind, config = hand_config)
-            # print(hand_value.cost)
-            is_agari = hand_value.cost is not None
-        return is_agari
-
-    def _get_machi(self, tiles_34) :
-        tile_count = sum(tiles_34)
-        assert tile_count < 14 and tile_count % 2 == 1
-
-        machi_tiles_34 = [0] * 34
-        for i in range(0,34) :
-            temp_tiles = copy.copy(tiles_34)
-            if temp_tiles[i] < 4 :
-                temp_tiles[i] += 1
-                if self.agari.is_agari(temp_tiles) :
-                    machi_tiles_34[i] = 1
-        return machi_tiles_34
-
-    def _get_tenpai_tile(self, tiles_34) :
-        tenpai_tiles_34 = [0] * 34
-        for i in range(0,34) :
-            temp_tiles = copy.copy(tiles_34)
-            if temp_tiles[i] > 0 :
-                temp_tiles[i] -= 1
-                machi_tiles_34 = self._get_machi(temp_tiles)
-                if sum(machi_tiles_34) > 0 :
-                    tenpai_tiles_34[i] = 1
-        return tenpai_tiles_34
-
-    def _make_hand_config(self,
-        is_tsumo=False,
-        is_riichi=False,
-        is_ippatsu=False,
-        is_rinshan=False,
-        is_chankan=False,
-        is_haitei=False,
-        is_houtei=False,
-        is_daburu_riichi=False,
-        is_nagashi_mangan=False,
-        is_tenhou=False,
-        is_renhou=False,
-        is_chiihou=False,
-        player_wind=None,
-        round_wind=None,
-    ):
-        options = OptionalRules(
-            has_open_tanyao=True,
-            has_aka_dora=True,
-            has_double_yakuman=True,
-            renhou_as_yakuman=False,
-            has_daisharin=False,
-            has_daisharin_other_suits=False,
-            # has_daichisei=False,
-            # has_sashikomi_yakuman=False,
-            # limit_to_sextuple_yakuman=True,
-            # paarenchan_needs_yaku=False,
-        )
-        return HandConfig(
-            is_tsumo=is_tsumo,
-            is_riichi=is_riichi,
-            is_ippatsu=is_ippatsu,
-            is_rinshan=is_rinshan,
-            is_chankan=is_chankan,
-            is_haitei=is_haitei,
-            is_houtei=is_houtei,
-            is_daburu_riichi=is_daburu_riichi,
-            is_nagashi_mangan=is_nagashi_mangan,
-            is_tenhou=is_tenhou,
-            is_renhou=is_renhou,
-            is_chiihou=is_chiihou,
-            player_wind=player_wind,
-            round_wind=round_wind,
-            # is_open_riichi=False,
-            # paarenchan=0,
-            options=options,
-        )
