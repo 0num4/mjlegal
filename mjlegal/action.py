@@ -12,6 +12,7 @@ class Action :
     consumed : list = None
     tsumogiri : bool = False
     rinshan   : bool = False
+    reach_decleared : bool = False
 
     def to_mjai(self) :
         res = {

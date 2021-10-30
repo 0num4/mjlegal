@@ -18,6 +18,8 @@ class HandTool :
         player_state = game_state.player_states[actor]
         tiles = player_state.tiles
         tehai = tiles + [win_tile]
+        if TilesUtil.include_closed_tile(tehai) :
+            return False
         tiles34 = TilesUtil.tiles_to_tiles34(tehai)
         is_agari = False
         if self.agari.is_agari(tiles34) :
@@ -49,6 +51,9 @@ class HandTool :
         return is_agari
 
     def get_tenpai_tiles(self, tiles) :
+        if TilesUtil.include_closed_tile(tiles) :
+            return []
+
         tiles34 = TilesUtil.tiles_to_tiles34(tiles)
         tenpai_tiles_34 = self.get_tenpai_tiles34(tiles34)
         tenpai_dahais = []

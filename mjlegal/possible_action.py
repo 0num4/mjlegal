@@ -9,6 +9,17 @@ class PossibleActionGenerator :
     def __init__(self) :
         self.hand_tool = HandTool()
 
+    def possible_game_actions(self, game_state) :
+        actions = (self.possible_actions_hora(game_state) 
+                + self.possible_actions_nukidora(game_state)
+                + self.possible_actions_pon(game_state)
+                + self.possible_actions_ankan(game_state)
+                + self.possible_actions_kakan(game_state)
+                + self.possible_actions_daiminkan(game_state)
+                + self.possible_action_dahai(game_state)
+                + self.possible_actions_dahai_with_reach(game_state) )
+        return actions
+
     def player_action_candidate(self, game_state : GameState) :
         candidate = []
         previous_action = game_state.previous_action
@@ -42,9 +53,6 @@ class PossibleActionGenerator :
                     candidate.append(hora)
 
         return candidate
-
-    def possible_game_actions(self, game_state) :
-        pass
         
     def possible_action_dahai(self, game_state) :
         actions = []
@@ -171,7 +179,7 @@ class PossibleActionGenerator :
         previous_action = game_state.previous_action
         if previous_action is not None  :
             prev_type  = previous_action.type
-            if prev_type in (ActionType.TSUMO) :
+            if prev_type == ActionType.TSUMO :
                 prev_actor = previous_action.actor
                 prev_actor_state = game_state.player_states[prev_actor]
                 tiles = prev_actor_state.tehai
@@ -181,7 +189,7 @@ class PossibleActionGenerator :
                     actions.append(Action(type = ActionType.NUKI, actor = prev_actor, tile = nukidora))
         return actions
 
-    def possible_actions_dahai_after_reach(self, game_state):
+    def possible_actions_dahai_with_reach(self, game_state):
         actions = []
         previous_action = game_state.previous_action
         if previous_action is not None  :
@@ -194,7 +202,7 @@ class PossibleActionGenerator :
                     tenpai_dahais = self.hand_tool.get_tenpai_tiles(tiles)
                     for dahai in tenpai_dahais :
                         reach_dahai_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
-                                    tile = dahai, tsumogiri = (prev_actor_state.tsumo_tile == dahai))
+                                    tile = dahai, tsumogiri = (prev_actor_state.tsumo_tile == dahai), reach_decleared = True)
                         actions.append(reach_dahai_action)
         return actions
 

@@ -20,3 +20,7 @@ class MjaiPlayerLoader :
         elif action_type == 'none' :
             pass
 
+    @property
+    def game(self) :
+        return self.mjaiLoader.game
+

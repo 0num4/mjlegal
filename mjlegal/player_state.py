@@ -108,7 +108,7 @@ class PlayerState :
         self.ho.append(sutehai)
         if reach_declear :
             self.reach_ho_index = len(self.ho)
-        self.prev_action = Action(type = ActionType.DAHAI, actor = self.player_id, tile = tile)
+        self.prev_action = Action(type = ActionType.DAHAI, actor = self.player_id, tile = tile, reach_decleared = reach_declear)
         return self.prev_action
         
     def pon(self, pai, consumed, from_id):

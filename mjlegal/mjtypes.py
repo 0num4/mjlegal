@@ -20,7 +20,10 @@ class Tile :
     TILES136_SUIT_OFFSET = {"m" : 0, "p" : 36, "s" : 72, "z" : 108}
 
     def to_str(self) :
-        return str(self.number) + self.suit + ("r" if self.is_aka else "")
+        s = "?"
+        if self.number > -1 and self.suit != "?" :
+            s = str(self.number) + self.suit + ("r" if self.is_aka else "")
+        return s
 
     def __str__(self):
         return self.to_str()
@@ -138,7 +141,8 @@ class TilesUtil :
 
     @staticmethod
     def tiles_to_tiles34(tiles) :
-        tiles136 = TilesUtil.tiles_to_tiles136(tiles)
+        filtered_tiles = [tile for tile in tiles if tile.to_str() != "?"]
+        tiles136 = TilesUtil.tiles_to_tiles136(filtered_tiles)
         return TilesConverter.to_34_array(tiles136)
 
     @staticmethod
@@ -169,6 +173,10 @@ class TilesUtil :
             if sum(Tile.equal(find_tile, tile, True) for find_tile in find_tiles) > 0 :
                 founded.append(tile)
         return founded
+
+    @staticmethod
+    def include_closed_tile(tiles) :
+        return any(tile.to_str() == "?" for tile in tiles)
 
 
 

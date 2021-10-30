@@ -6,7 +6,7 @@ from .action import Action
 
 class MjaiLoader :
     def __init__(self) :
-        self.game = None
+        self.game = GameState()
         self.reach_dahai = False # 次の打牌が立直宣言牌
         
     def action(self, action) :
