@@ -19,40 +19,6 @@ class PossibleActionGenerator :
                 + self.possible_action_dahai(game_state)
                 + self.possible_actions_dahai_with_reach(game_state) )
         return actions
-
-    def player_action_candidate(self, game_state : GameState) :
-        candidate = []
-        previous_action = game_state.previous_action
-        
-        if previous_action is None  :
-            tsumo = Action(ActionType.TSUMO, game_state.oya)
-            candidate.append(tsumo)
-        else :
-            prev_type  = previous_action.type
-            prev_actor = previous_action.actor
-            if prev_type in (ActionType.TSUMO, ActionType.PON, ActionType.CHI) :
-                dahai = Action(ActionType.DAHAI, prev_actor)
-                candidate.append(dahai)
-            elif prev_type in (ActionType.ANKAN, ActionType.KAKAN, ActionType.DAIMINKAN, ActionType.NUKI) :
-                tsumo = Action(ActionType.TSUMO, prev_actor)
-                candidate.append(tsumo)
-            elif prev_type == ActionType.DAHAI :
-                other_player_ids = filter(lambda id : id != prev_actor, range(0, game_state.num_players))
-                for id in other_player_ids :
-                    meld_actions = [Action(action, id) for action in (ActionType.PON, ActionType.CHI, ActionType.DAIMINKAN, ActionType.HORA)]
-                    candidate += meld_actions
-                
-                next_player_id = (prev_actor + 1) % game_state.num_players
-                tsumo = Action(ActionType.TSUMO, next_player_id)
-                candidate.append(tsumo)
-
-            if prev_type in (ActionType.ANKAN, ActionType.KAKAN, ActionType.NUKI) :
-                other_player_ids = filter(lambda id : id != prev_actor, range(0, game_state.num_players))
-                for id in other_player_ids :
-                    hora = Action(ActionType.HORA, id)
-                    candidate.append(hora)
-
-        return candidate
         
     def possible_action_dahai(self, game_state) :
         actions = []
