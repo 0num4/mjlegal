@@ -61,7 +61,6 @@ class HandTool :
     def get_tenpai_tiles(self, tiles) :
         if TilesUtil.include_closed_tile(tiles) :
             return []
-
         tiles34 = TilesUtil.tiles_to_tiles34(tiles)
         tenpai_tiles_34 = self.get_tenpai_tiles34(tiles34)
         tenpai_dahais = []
@@ -85,8 +84,8 @@ class HandTool :
     def get_tenpai_tiles34(self, tiles_34) :
         tenpai_tiles_34 = [0] * 34
         for i in range(0,34) :
-            temp_tiles = copy.copy(tiles_34)
-            if temp_tiles[i] > 0 :
+            if tiles_34[i] > 0 :
+                temp_tiles = copy.copy(tiles_34)
                 temp_tiles[i] -= 1
                 machi_tiles_34 = self.get_machi_tiles34(temp_tiles)
                 if sum(machi_tiles_34) > 0 :
