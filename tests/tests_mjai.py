@@ -22,16 +22,22 @@ def test_mjai_load(log_filename) :
     records = load_mjai_records(log_filename)
     mjl = MjaiLoader()
     possibleActionGenerator = PossibleActionGenerator()
-    for record in records :
+    for i in range(0, len(records) - 1) :
+        record = records[i]
+        next_record = records[i + 1]
         mjl.action(record)
-
+ 
         # for debug
-        print(record)
-        for player_state in mjl.game.player_states :
-            print(player_state.dump())
-
-        possibleActionGenerator.possible_game_actions(mjl.game) # TODO check actions
-        # possibleActionGenerator.possible_actions_hora(mjl.game)
+        # print(record)
+        # for player_state in mjl.game.player_states :
+        #     print(player_state.dump())
+ 
+        possible_actions = possibleActionGenerator.possible_game_actions(mjl.game)
+        if(next_record['type'] in ("dahai", "pon", "ankan", "daiminkan", "kakan", "nukidora")) :
+            possible_record = [action for action in possible_actions 
+                if action.to_mjai()['type'] == next_record['type'] and action.to_mjai()['actor'] == next_record['actor']]
+            assert len(possible_record) > 0 
+            
 
 def load_mjai_player_records(filename) :
     records = []
