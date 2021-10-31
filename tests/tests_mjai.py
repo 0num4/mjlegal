@@ -21,11 +21,17 @@ def load_mjai_records(filename) :
 def test_mjai_load(log_filename) :
     records = load_mjai_records(log_filename)
     mjl = MjaiLoader()
+    possibleActionGenerator = PossibleActionGenerator()
     for record in records :
         mjl.action(record)
-        # print(record)
-        # for i, ps in enumerate(mjl.game.player_states) :
-        #     print(i, ps.dump())
+
+        # for debug
+        print(record)
+        for player_state in mjl.game.player_states :
+            print(player_state.dump())
+
+        possibleActionGenerator.possible_game_actions(mjl.game) # TODO check actions
+        # possibleActionGenerator.possible_actions_hora(mjl.game)
 
 def load_mjai_player_records(filename) :
     records = []

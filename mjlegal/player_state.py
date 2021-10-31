@@ -82,6 +82,14 @@ class PlayerState :
         return tehai
 
     @property
+    def full_tehai(self) :
+        tehai = self.tehai[:]
+        if len(self.melds) > 0 :
+            meld_tiles = sum([meld.tiles for meld in self.melds], [])
+            tehai += meld_tiles
+        return tehai
+
+    @property
     def tiles(self) :
         return self._tiles
 
@@ -181,7 +189,7 @@ class PlayerState :
     
     @property
     def melds136(self) :
-        return [meld.to_meld136() for meld in self.melds]
+        return [meld.to_meld136() for meld in self.melds if meld.is_opened]
 
     def export_tile136(self) :
         return {

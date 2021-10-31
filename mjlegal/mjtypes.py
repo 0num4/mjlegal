@@ -102,11 +102,16 @@ class Meld :
     # for calls in array
     def __repr__(self):
         return self.__str__()
+
+    @property
+    def is_opened(self) :
+        return not (self.type in (Meld.ANKAN, Meld.NUKI))
     
     def to_meld136(self) :
         meld_type = self.LOOKUP_TABLE_MELD136_TYPE[self.type]
         tiles136 = TilesUtil.tiles_to_tiles136(self.tiles)
-        return meld.Meld(meld_type = self.type, tiles = tiles136, called_tile = tiles136[0], from_who = self.from_who)
+        is_open = self.is_opened
+        return meld.Meld(meld_type = meld_type, tiles = tiles136, called_tile = tiles136[0], from_who = self.from_who, opened = is_open)
 
 class TilesUtil :
     @staticmethod

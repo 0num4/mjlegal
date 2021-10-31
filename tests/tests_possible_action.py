@@ -2,6 +2,8 @@ import unittest
 import json
 from mjlegal.possible_action import PossibleActionGenerator
 from mjlegal.mjai import MjaiLoader
+from mjlegal.hand_tool import HandTool
+from mjlegal.mjtypes import Tile
 
 def loadGameStateFromMjai(logs) :
     mjl = MjaiLoader()
@@ -192,6 +194,42 @@ class TestPossibleAction(unittest.TestCase) :
         horas_json = json.dumps(horas_mjai)
         expect_json = json.dumps(expect)
         self.assertEqual(horas_json, expect_json)
+
+    def test_possible_action_hora_ron_2(self) :
+        mjai_log = [{"type":"start_game","names":["shanten","shanten","shanten"]},
+                    {"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"F","tehais":[["2p","3p","3p","4p","4p","5p","2s","2s","6s","6s","7s","8s","N"],["1m","2p","3p","4p","9p","9p","3s","3s","E","E","S","S","P"],["1m","9m","2p","2p","5p","6p","2s","3s","5sr","5s","7s","8s","9s"]]},
+                    {"type":"tsumo","actor":0,"pai":"1p"},
+                    {"type":"nukidora","actor":0,"pai":"N"},
+                    {"type":"tsumo","actor":0,"pai":"8p"},
+                    {"type":"dahai","actor":0,"pai":"1p" , "tsumogiri" : False},
+                    {"type":"tsumo","actor":1,"pai":"N"},
+                    {"type":"nukidora","actor":1,"pai":"N"},
+                    {"type":"tsumo","actor":1,"pai":"1m"},
+                    {"type":"dahai","actor":1,"pai":"1m" ,"tsumogiri" : True},
+                    {"type":"tsumo","actor":2,"pai":"N"},
+                    {"type":"nukidora","actor":2,"pai":"N"},
+                    {"type":"tsumo","actor":2,"pai":"2s"},
+                    {"type":"dahai","actor":2,"pai":"2s" ,"tsumogiri" : True},
+                    {"type":"pon","actor":0,"target":2,"pai":"2s","consumed":["2s","2s"]},
+                    {"type":"dahai","actor":0,"pai":"8p" , "tsumogiri" : False},
+                    {"type":"tsumo","actor":1,"pai":"1p"},
+                    {"type":"dahai","actor":1,"pai":"1p" ,"tsumogiri" : True},
+                    {"type":"tsumo","actor":2,"pai":"6s"},
+                    {"type":"dahai","actor":2,"pai":"6s" ,"tsumogiri" : True}
+                    ]
+        game_state = loadGameStateFromMjai(mjai_log)
+        pag = PossibleActionGenerator()
+        action = pag.possible_game_actions(game_state)
+        expect = [{"type": "pon", "actor": 0, "target": 2, "pai": "6s", "consumed": ["6s", "6s"]}]
+        horas_mjai = [act.to_mjai() for act in action]
+        horas_json = json.dumps(horas_mjai)
+        expect_json = json.dumps(expect)
+        self.assertEqual(horas_json, expect_json)
+        
+        # hand_tool = HandTool()
+        # hand_tool.can_hora(game_state, 0, Tile.from_str('6s'), False, False)
+
+        
 
 
 

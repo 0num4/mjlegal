@@ -20,12 +20,20 @@ class HandTool :
         tehai = tiles + [win_tile]
         if TilesUtil.include_closed_tile(tehai) :
             return False
+
+        full_tehai = player_state.full_tehai
+        if player_state.tsumo_tile is None :
+            full_tehai.append(win_tile)
+        
         tiles34 = TilesUtil.tiles_to_tiles34(tehai)
         is_agari = False
         if self.agari.is_agari(tiles34) :
             tiles136 = TilesUtil.tiles_to_tiles136(tiles)
             tehai136 = TilesUtil.tiles_to_tiles136(tehai)
-            melds136 = player_state.melds136 if len(player_state.melds) > 0 else None
+            melds136 = player_state.melds136
+            full_tehai136 = TilesUtil.tiles_to_tiles136(full_tehai)
+            if len(melds136) == 0 :
+                melds136 = None
             win_tile136_list = list(set(tehai136) - set(tiles136))
             dora_ind = TilesUtil.tiles_to_tiles136(game_state.dora_markers)
             is_riichi= player_state.is_reach
@@ -44,7 +52,7 @@ class HandTool :
                                                 is_chiihou = False, # TODO chiihou
                                                 player_wind = HandTool.WINDS[player_wind],
                                                 round_wind = HandTool.WINDS[game_state.bakaze])
-            hand_value = self.hand.estimate_hand_value(tiles = tehai136, win_tile = win_tile136_list[0],
+            hand_value = self.hand.estimate_hand_value(tiles = full_tehai136, win_tile = win_tile136_list[0],
                                             melds = melds136, dora_indicators = dora_ind, config = hand_config)
             # print(hand_value.cost)
             is_agari = hand_value.cost is not None
