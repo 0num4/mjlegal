@@ -70,7 +70,7 @@ class HandTool :
 
     def get_machi_tiles34(self, tiles_34) :
         tile_count = sum(tiles_34)
-        assert tile_count < 14 and tile_count % 2 == 1
+        assert tile_count < 14 and (tile_count - 1) % 3 == 0
 
         machi_tiles_34 = [0] * 34
         for i in range(0,34) :
