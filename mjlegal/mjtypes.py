@@ -17,6 +17,7 @@ class ActionType(Enum) :
 class Tile :
     # const
     LOOKUP_MJAI_PAI_NAME_TABLE = {'5mr': '0m', '5pr': '0p', '5sr': '0s', 'E': '1z', 'S': '2z', 'W': '3z', 'N': '4z', 'P': '5z', 'F': '6z', 'C': '7z'}
+    LOOKUP_MSPZ_PAI_NAME_TABLE = {v: k for k, v in LOOKUP_MJAI_PAI_NAME_TABLE.items()}
     TILES136_SUIT_OFFSET = {"m" : 0, "p" : 36, "s" : 72, "z" : 108}
 
     def to_str(self) :
@@ -24,6 +25,10 @@ class Tile :
         if self.number > -1 and self.suit != "?" :
             s = str(self.number) + self.suit + ("r" if self.is_aka else "")
         return s
+
+    def to_mjai_str(self) :
+        s = self.to_str()
+        return Tile.LOOKUP_MSPZ_PAI_NAME_TABLE[s] if s in Tile.LOOKUP_MSPZ_PAI_NAME_TABLE else s
 
     def __str__(self):
         return self.to_str()

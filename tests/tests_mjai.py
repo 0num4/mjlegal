@@ -53,6 +53,9 @@ def load_mjai_player_records(filename) :
     log_input_file.close()
     return records
 
+def equal_mjai_action(action1, action2) :
+    return all(action1[key] == action2[key] for key in action1)
+
 class TestMjaiLoader(unittest.TestCase) :
     def test_mjai_load_0(self) :
         test_mjai_load("./tests/test_data/test_mjson_0.mjson")
@@ -64,14 +67,24 @@ class TestMjaiLoader(unittest.TestCase) :
         records = load_mjai_player_records('./tests/test_data/test_mjai_player_log_01.txt')
         mjaiPlayerLoader = MjaiPlayerLoader()
         mjaiPossibleActionGenerator = MjaiPossibleActionGenerator()
+        mjaiPossibleActionGenerator.name = 'Manue1'
+        possible_actions = None
+        previous_receive_action = None
         for record in records :
             direction = record['direction']
             ev = record['record']
             if direction == SERVER_TO_CLIENT :
-                mjaiPlayerLoader.action_receive(ev)
-                mjaiPossibleActionGenerator.possible_mjai_action(mjaiPlayerLoader.game, ev) # TODO check actions
+                previous_receive_action = ev
+                mjaiPlayerLoader.action_receive(previous_receive_action)
+                possible_actions = mjaiPossibleActionGenerator.possible_mjai_action(mjaiPlayerLoader.game, previous_receive_action) # TODO check actions
             elif direction == CLIENT_TO_SERVER :
                 mjaiPlayerLoader.action_send(ev)
+                is_legal = any(equal_mjai_action(possible, ev) for possible in possible_actions)
+                if not is_legal :
+                    print("previous receive:", previous_receive_action)
+                    print("illegal_action:", ev)
+                    print("possible_action:", possible_actions)
+                    print("player_states:",mjaiPlayerLoader.game.player_states[mjaiPlayerLoader.game.player_id].dump())
             else :
                 self.fail('Invalid mjai player record..')
 
