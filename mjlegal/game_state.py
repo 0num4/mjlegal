@@ -6,7 +6,7 @@ class GameState :
         self.start_kyoku()
 
     def reset(self) :
-        self.bakaze = 0
+        self.bakaze = "E"
         self.kyoku = 0
         self.honba = 0
         self.chicha = 0 # 常に0

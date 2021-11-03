@@ -85,7 +85,7 @@ class PlayerState :
     def full_tehai(self) :
         tehai = self.tehai[:]
         if len(self.melds) > 0 :
-            meld_tiles = sum([meld.tiles for meld in self.melds], [])
+            meld_tiles = sum([meld.tiles for meld in self.melds if meld.is_opened], [])
             tehai += meld_tiles
         return tehai
 
@@ -185,7 +185,13 @@ class PlayerState :
         return self.prev_action
         
     def dump(self) :
-        return {'tiles' : TilesUtil.tiles_to_str(self._tiles), 'tsumo':self.tsumo_tile, 'ho' : TilesUtil.tiles_to_str(self.ho), 'melds' : self.melds}
+        return {
+            'tiles' : TilesUtil.tiles_to_str(self._tiles), 
+            'tsumo':self.tsumo_tile,
+            'ho' : TilesUtil.tiles_to_str(self.ho),
+            'melds' : self.melds,
+            'reach_ho_index' : self.reach_ho_index
+        }
     
     @property
     def melds136(self) :

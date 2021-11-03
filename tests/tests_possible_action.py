@@ -1,9 +1,13 @@
 import unittest
 import json
+from mjlegal.game_state import GameState
+from mjlegal.player_state import PlayerState
 from mjlegal.possible_action import PossibleActionGenerator
 from mjlegal.mjai import MjaiLoader
 from mjlegal.hand_tool import HandTool
-from mjlegal.mjtypes import Tile
+from mjlegal.mjtypes import Tile, TilesUtil
+from mjlegal.mjtypes import ActionType
+from mjlegal.action import Action
 
 def loadGameStateFromMjai(logs) :
     mjl = MjaiLoader()
@@ -220,17 +224,9 @@ class TestPossibleAction(unittest.TestCase) :
         game_state = loadGameStateFromMjai(mjai_log)
         pag = PossibleActionGenerator()
         action = pag.possible_game_actions(game_state)
-        expect = [{"type": "pon", "actor": 0, "target": 2, "pai": "6s", "consumed": ["6s", "6s"]}]
+        expect = [{"type": "hora", "actor": 0, "target": 2, "pai": "6s"},{"type": "pon", "actor": 0, "target": 2, "pai": "6s", "consumed": ["6s", "6s"]}]
         horas_mjai = [act.to_mjai() for act in action]
         horas_json = json.dumps(horas_mjai)
         expect_json = json.dumps(expect)
         self.assertEqual(horas_json, expect_json)
         
-        # hand_tool = HandTool()
-        # hand_tool.can_hora(game_state, 0, Tile.from_str('6s'), False, False)
-
-        
-
-
-
-
