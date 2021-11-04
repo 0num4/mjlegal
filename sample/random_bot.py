@@ -4,8 +4,7 @@
  A mahjong player that will play random moves.
  This is example for mjlegal.
  
- Example : 
- $ python -m sample.random_bot
+ Usage : python -m sample.random_bot
 """
 
 import json
