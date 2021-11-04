@@ -26,7 +26,8 @@ class MjaiLoader :
                 player_state.player_id = id
                 player_state.tiles = TilesUtil.tiles_str_array_to_tiles(tehai)
                 self.game.player_states.append(player_state)
-            
+        elif action_type == "dora" :
+            self.game.dora_markers.append(Tile.from_str(action["dora_marker"]))
         elif "actor" in action :
             action_actor = action["actor"]
             player_state = self.game.player_states[action_actor]

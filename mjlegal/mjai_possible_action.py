@@ -12,7 +12,7 @@ class MjaiPossibleActionGenerator :
         if action_type == "hello" :
             join_action = {"type" : "join", "name" : self.name, "room" : "default"}
             possible_actions.append(join_action)
-        elif action_type in ("start_game", "start_kyoku", "reach_accepted", "hora", "ryukyoku", "end_kyoku", "end_game") :
+        elif action_type in ("start_game", "start_kyoku", "reach_accepted", "dora", "hora", "ryukyoku", "end_kyoku", "end_game") :
             none_action = {"type" : "none"}
             possible_actions.append(none_action)
         elif "actor" in previous_mjai_action :
