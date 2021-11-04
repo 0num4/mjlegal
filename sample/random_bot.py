@@ -1,5 +1,5 @@
 """ 
- RandomBot.py
+ random_bot.py
 
  A mahjong player that will play random moves.
  This is example for mjlegal.
