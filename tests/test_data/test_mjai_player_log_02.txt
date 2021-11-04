@@ -1,0 +1,1577 @@
+<-	{"type":"hello","protocol":"mjsonp","protocol_version":3}
+->	{"type":"join","name":"Manue1","room":"default"}
+<-	{"type":"start_game","id":1,"names":["shanten","Manue1","shanten"]}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"5p","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["2p","3p","1s","1s","2s","4s","6s","E","E","S","W","N","F"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"2p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[{"type":"nukidora","actor":1,"pai":"N"}]}
+->	{"type":"nukidora","actor":1,"pai":"N"}
+<-	{"type":"nukidora","actor":1,"pai":"N"}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"P","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"S","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"S","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"P","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"4s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"W","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"F","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"F","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"4p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"6s","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":2,"pai":"6s","consumed":["6s","6s"]}]}
+furo_cand: {"type":"pon","actor":1,"target":2,"pai":"6s","consumed":["6s","6s"]}
+  shanten: 3 -> 2
+  ept: 242 -> 83
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"C","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"6p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"C","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"C","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"3p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"3p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1s","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":0,"pai":"1s","consumed":["1s","1s"]}]}
+furo_cand: {"type":"pon","actor":1,"target":0,"pai":"1s","consumed":["1s","1s"]}
+  shanten: 2 -> 1
+  ept: 148 -> 110
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"P","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"reach","actor":0}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"E","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":0,"pai":"E","consumed":["E","E"]}]}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":0,"deltas":[-1000,0,0],"scores":[29000,30000,30000]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"F","possible_actions":[]}
+[Pai[1p], "suji weak_suji prereach_suji outer_prereach_sutehai outer_early_sutehai chances<=1 chances<=2 chances<=3 suji_visible<=1 suji_visible<=2 suji_visible<=3 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3p], "urasuji early_urasuji matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=3 visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 dora_suji +-1_in_prereach_sutehais>=1 +-1_in_prereach_sutehais>=2 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji matagisuji early_matagisuji senkisuji early_senkisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 2_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[6s], "urasuji early_urasuji matagisuji early_matagisuji late_matagisuji senkisuji early_senkisuji visible>=1 visible>=2 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[8s], "urasuji early_urasuji matagisuji early_matagisuji late_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=1 chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[F], "tsupai visible>=1 visible>=2 fanpai sangenpai"]
+->	{"type":"dahai","actor":1,"pai":"1s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3s","possible_actions":[]}
+[Pai[1p], "suji weak_suji prereach_suji outer_prereach_sutehai outer_early_sutehai chances<=1 chances<=2 chances<=3 suji_visible<=1 suji_visible<=2 suji_visible<=3 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3p], "urasuji early_urasuji matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=3 visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 dora_suji +-1_in_prereach_sutehais>=1 +-1_in_prereach_sutehais>=2 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji matagisuji early_matagisuji senkisuji early_senkisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 2_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[6s], "urasuji early_urasuji matagisuji early_matagisuji late_matagisuji senkisuji early_senkisuji visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[F], "tsupai visible>=1 visible>=2 fanpai sangenpai"]
+[Pai[3s], "urasuji early_urasuji matagisuji early_matagisuji senkisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 2_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+->	{"type":"dahai","actor":1,"pai":"8s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"8s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"C","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9p","possible_actions":[]}
+[Pai[1p], "suji weak_suji prereach_suji outer_prereach_sutehai outer_early_sutehai chances<=1 chances<=2 chances<=3 suji_visible<=1 suji_visible<=2 suji_visible<=3 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3p], "urasuji early_urasuji matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=3 visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 dora_suji +-1_in_prereach_sutehais>=1 +-1_in_prereach_sutehais>=2 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji matagisuji early_matagisuji senkisuji early_senkisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 2_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[3s], "urasuji early_urasuji matagisuji early_matagisuji senkisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 2_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[6s], "urasuji early_urasuji matagisuji early_matagisuji late_matagisuji senkisuji early_senkisuji visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2 same_type_in_prereach>=3"]
+[Pai[F], "tsupai visible>=1 visible>=2 fanpai sangenpai"]
+->	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9m","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3s","possible_actions":[{"type":"reach","actor":1}]}
+->	{"type":"reach","actor":1}
+<-	{"type":"reach","actor":1,"cannot_dahai":["1p","2p","3p","1s","2s","3s","4s","6s","E"]}
+->	{"type":"dahai","actor":1,"pai":"F","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"F","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":1,"deltas":[0,-1000,0],"scores":[29000,29000,30000]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"W","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"6p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"6p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"8p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"5s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"2s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"2s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"ryukyoku","reason":"fanpai","tehais":[["1m","1m","1m","2p","4p","5p","5pr","7p","8p","9p","4s","5sr","6s"],["1p","2p","3p","1s","2s","2s","3s","3s","4s","6s","6s","E","E"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]],"tenpais":[true,true,false],"deltas":[1500,1500,-3000],"scores":[30500,30500,27000]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":1,"kyotaku":2,"oya":0,"dora_marker":"5s","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["1m","9m","2p","4p","7p","9p","9p","2s","5s","6s","8s","9s","E"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"S","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"3s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"2s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"2s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"P","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"5s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"2p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"W","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"S","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"S","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"8p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"N","possible_actions":[{"type":"nukidora","actor":1,"pai":"N"}]}
+->	{"type":"nukidora","actor":1,"pai":"N"}
+<-	{"type":"nukidora","actor":1,"pai":"N"}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3p","possible_actions":[{"type":"reach","actor":1}]}
+->	{"type":"reach","actor":1}
+<-	{"type":"reach","actor":1,"cannot_dahai":["2p","4p","9p","4s","5s","6s","7s","8s","9s","3p"]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":1,"deltas":[0,-1000,0],"scores":[30500,29500,27000]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"E","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"6s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"E","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"P","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9m","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"2s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"S","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"S","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"S","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"6p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"6p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"F","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"F","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"F","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"ryukyoku","reason":"fanpai","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["2p","3p","4p","9p","9p","4s","5s","6s","6s","7s","8s","8s","9s"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]],"tenpais":[false,true,false],"deltas":[-1500,3000,-1500],"scores":[29000,32500,25500]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":2,"honba":2,"kyotaku":3,"oya":1,"dora_marker":"8p","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["1m","9m","1p","2p","2p","1s","3s","6s","7s","8s","E","S","W"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"S","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"S","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"8s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"2p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"2p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9m","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":2,"pai":"9m","consumed":["9m","9m"]}]}
+furo_cand: {"type":"pon","actor":1,"target":2,"pai":"9m","consumed":["9m","9m"]}
+  shanten: 3 -> 2
+  ept: 493 -> 0
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"2s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"7p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"4p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"4p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1s","possible_actions":[{"type":"reach","actor":1}]}
+->	{"type":"dahai","actor":1,"pai":"2p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"2p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"6p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"W","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5pr","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3p","possible_actions":[{"type":"reach","actor":1}]}
+->	{"type":"reach","actor":1}
+<-	{"type":"reach","actor":1,"cannot_dahai":["9m","2p","4p","6s","7s","8s","3p"]}
+->	{"type":"dahai","actor":1,"pai":"1s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":1,"deltas":[0,-1000,0],"scores":[29000,31500,25500]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"reach","actor":2}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"4p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":2,"deltas":[0,0,-1000],"scores":[29000,31500,24500]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"4s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"4s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"C","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"2p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"5s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"E","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"E","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"C","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"W","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"5sr","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"5sr","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"5sr","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"ryukyoku","reason":"fanpai","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["9m","9m","2p","3p","4p","1s","3s","6s","6s","7s","7s","8s","8s"],["6p","7p","8p","9p","9p","2s","2s","3s","4s","4s","4s","5s","6s"]],"tenpais":[false,true,true],"deltas":[-3000,1500,1500],"scores":[26000,33000,26000]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":2,"honba":3,"kyotaku":5,"oya":1,"dora_marker":"6s","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["9m","1p","1p","2p","3p","5p","6p","7p","4s","7s","W","P","P"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"5p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"7s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"7s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"2p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"5p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"5p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"7s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"7s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"6s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3s","possible_actions":[{"type":"reach","actor":1}]}
+->	{"type":"reach","actor":1}
+<-	{"type":"reach","actor":1,"cannot_dahai":["9m","1p","2p","3p","5p","6p","7p","2s","P","3s"]}
+->	{"type":"dahai","actor":1,"pai":"4s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"4s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":1,"deltas":[0,-1000,0],"scores":[26000,32000,26000]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"4p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9m","tsumogiri":true,"possible_actions":[{"type":"hora","actor":1,"target":0,"pai":"9m"}]}
+->	{"type":"hora","actor":1,"target":0,"pai":"9m"}
+<-	{"type":"hora","actor":1,"target":0,"pai":"9m","uradora_markers":["3s"],"hora_tehais":["9m","9m","1p","2p","3p","5p","6p","7p","2s","3s","4s","P","P"],"yakus":[["uradora",1],["reach",1]],"fu":40,"fan":2,"hora_points":3900,"deltas":[-4800,10800,0],"scores":[21200,42800,26000]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":2,"honba":4,"kyotaku":0,"oya":1,"dora_marker":"C","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["1m","9m","2p","2p","2p","4p","5pr","8p","6s","E","W","W","P"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"7s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1m","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"E","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"W","tsumogiri":true,"possible_actions":[{"type":"pon","actor":1,"target":2,"pai":"W","consumed":["W","W"]}]}
+furo_cand: {"type":"pon","actor":1,"target":2,"pai":"W","consumed":["W","W"]}
+  shanten: 2 -> 1
+  ept: 1019 -> 0
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"E","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2p","tsumogiri":false,"possible_actions":[{"type":"daiminkan","actor":1,"target":2,"pai":"2p","consumed":["2p","2p","2p"]},{"type":"pon","actor":1,"target":2,"pai":"2p","consumed":["2p","2p"]}]}
+furo_cand: {"type":"pon","actor":1,"target":2,"pai":"2p","consumed":["2p","2p"]}
+  shanten: 2 -> 2
+  ept: 870 -> 0
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"3s","tsumogiri":true,"possible_actions":[{"type":"pon","actor":1,"target":0,"pai":"3s","consumed":["3s","3s"]}]}
+furo_cand: {"type":"pon","actor":1,"target":0,"pai":"3s","consumed":["3s","3s"]}
+  shanten: 2 -> 1
+  ept: 615 -> 1005
+->	{"type":"pon","actor":1,"target":0,"pai":"3s","consumed":["3s","3s"]}
+<-	{"type":"pon","actor":1,"target":0,"pai":"3s","consumed":["3s","3s"],"cannot_dahai":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"4s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"4s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"5s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"F","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"F","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"F","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"4s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"4p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"4p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"C","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"C","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"C","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3p","tsumogiri":false,"possible_actions":[{"type":"hora","actor":1,"target":2,"pai":"3p"}]}
+->	{"type":"hora","actor":1,"target":2,"pai":"3p"}
+<-	{"type":"hora","actor":1,"target":2,"pai":"3p","uradora_markers":[],"hora_tehais":["2p","2p","2p","4p","5pr","8p","8p","5s","6s","7s"],"yakus":[["akadora",1],["tanyaochu",1]],"fu":30,"fan":2,"hora_points":2900,"deltas":[0,4100,-4100],"scores":[21200,46900,21900]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":2,"honba":5,"kyotaku":0,"oya":1,"dora_marker":"1m","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["1m","3p","3p","4p","5p","6p","8p","5s","9s","E","P","P","C"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"8p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":0,"pai":"P","consumed":["P","P"]}]}
+furo_cand: {"type":"pon","actor":1,"target":0,"pai":"P","consumed":["P","P"]}
+  shanten: 3 -> 2
+  ept: 854 -> 505
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"E","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5pr","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"S","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"S","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"S","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3p","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":2,"pai":"3p","consumed":["3p","3p"]}]}
+furo_cand: {"type":"pon","actor":1,"target":2,"pai":"3p","consumed":["3p","3p"]}
+  shanten: 2 -> 1
+  ept: 910 -> 224
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"2s","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"2s","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"N","possible_actions":[{"type":"nukidora","actor":1,"pai":"N"}]}
+->	{"type":"nukidora","actor":1,"pai":"N"}
+<-	{"type":"nukidora","actor":1,"pai":"N"}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"3s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"C","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"C","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"5s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"3p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"3p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"reach","actor":2}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":2,"deltas":[0,0,-1000],"scores":[21200,46900,20900]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"F","possible_actions":[]}
+[Pai[4p], "urasuji matagisuji late_matagisuji reach_matagisuji senkisuji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_inner_prereach_sutehai 2_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[5p], "weak_suji reach_suji senkisuji visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 suji_in_tehais>=1 +-2_in_prereach_sutehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6p], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8p], "senkisuji chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2"]
+[Pai[6s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[P], "tsupai visible>=1 visible>=2 in_tehais>=2 fanpai sangenpai"]
+->	{"type":"dahai","actor":1,"pai":"F","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"F","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"W","possible_actions":[]}
+[Pai[4p], "urasuji matagisuji late_matagisuji reach_matagisuji senkisuji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_inner_prereach_sutehai 2_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[5p], "weak_suji reach_suji senkisuji visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 suji_in_tehais>=1 +-2_in_prereach_sutehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6p], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8p], "senkisuji chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2"]
+[Pai[6s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[P], "tsupai visible>=1 visible>=2 in_tehais>=2 fanpai sangenpai"]
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"4p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2p","possible_actions":[]}
+[Pai[6p], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8p], "suji weak_suji chances<=3 visible>=1 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2"]
+[Pai[6s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[P], "tsupai visible>=1 visible>=2 in_tehais>=2 fanpai sangenpai"]
+->	{"type":"dahai","actor":1,"pai":"2p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"2p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"6p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8s","possible_actions":[]}
+[Pai[8p], "suji weak_suji chances<=2 chances<=3 visible>=1 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[6s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[P], "tsupai visible>=1 visible>=2 in_tehais>=2 fanpai sangenpai"]
+[Pai[8s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+->	{"type":"dahai","actor":1,"pai":"3p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"3p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"4p","possible_actions":[]}
+[Pai[8p], "suji weak_suji chances<=2 chances<=3 visible>=1 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[6s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[8s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[P], "tsupai visible>=1 visible>=2 in_tehais>=2 fanpai sangenpai"]
+->	{"type":"dahai","actor":1,"pai":"4p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"4p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"N","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"S","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9s","possible_actions":[]}
+[Pai[8p], "suji weak_suji chances<=2 chances<=3 visible>=1 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[6s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[8s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[P], "tsupai visible>=1 visible>=2 in_tehais>=2 fanpai sangenpai"]
+[Pai[9s], "chances<=2 chances<=3 visible>=1 visible>=2 suji_visible<=2 suji_visible<=3 suji_in_tehais>=1 suji_in_tehais>=2"]
+->	{"type":"dahai","actor":1,"pai":"4p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"4p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"3s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"reach","actor":0}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":0,"pai":"P","consumed":["P","P"]}]}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":0,"deltas":[-1000,0,0],"scores":[20200,46900,20900]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[]}
+[Pai[3s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1"]
+[Pai[4s], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 same_type_in_prereach>=1"]
+[Pai[5s], "matagisuji early_matagisuji senkisuji early_senkisuji visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1 +-2_in_prereach_sutehais>=1 2_inner_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[6s], "urasuji early_urasuji matagisuji early_matagisuji visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[8s], "matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[9s], "matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 visible>=1 visible>=2 suji_visible<=2 suji_visible<=3 suji_in_tehais>=1 suji_in_tehais>=2 +-2_in_prereach_sutehais>=1 2_outer_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[2s], "senkisuji early_senkisuji chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1"]
+[Pai[8p], "suji weak_suji chances<=2 chances<=3 visible>=1 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4s], "weak_suji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[6s], "weak_suji visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[8s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[9s], "chances<=2 chances<=3 visible>=1 visible>=2 suji_visible<=2 suji_visible<=3 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[2s], "chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+->	{"type":"dahai","actor":1,"pai":"5p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"5p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9s","possible_actions":[]}
+[Pai[2s], "senkisuji early_senkisuji chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1"]
+[Pai[3s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1"]
+[Pai[4s], "suji weak_suji suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 same_type_in_prereach>=1"]
+[Pai[5s], "matagisuji early_matagisuji senkisuji early_senkisuji visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1 +-2_in_prereach_sutehais>=1 2_inner_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[6s], "urasuji early_urasuji matagisuji early_matagisuji visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[8s], "matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[9s], "matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 visible>=1 visible>=2 visible>=3 suji_visible<=2 suji_visible<=3 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2 +-2_in_prereach_sutehais>=1 2_outer_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[8p], "suji weak_suji chances<=2 chances<=3 visible>=1 suji_visible<=3 2<=n<=8 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "suji weak_suji suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[6s], "weak_suji visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[8s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[9s], "chances<=2 chances<=3 visible>=1 visible>=2 visible>=3 suji_visible<=2 suji_visible<=3 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2"]
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1m","possible_actions":[]}
+[Pai[2s], "senkisuji early_senkisuji chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1"]
+[Pai[3s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1"]
+[Pai[4s], "suji weak_suji suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 same_type_in_prereach>=1"]
+[Pai[5s], "matagisuji early_matagisuji senkisuji early_senkisuji visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1 +-2_in_prereach_sutehais>=1 2_inner_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[6s], "urasuji early_urasuji matagisuji early_matagisuji visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[8s], "matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_outer_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[9s], "matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=2 chances<=3 visible>=1 visible>=2 visible>=3 suji_visible<=2 suji_visible<=3 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2 +-2_in_prereach_sutehais>=1 2_outer_prereach_sutehai same_type_in_prereach>=1"]
+[Pai[2s], "chances<=2 chances<=3 visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[4s], "suji weak_suji suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6"]
+[Pai[5s], "visible>=1 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 5<=n<=5 in_tehais>=2 suji_in_tehais>=1"]
+[Pai[6s], "weak_suji visible>=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[8s], "chances<=2 chances<=3 suji_visible<=2 suji_visible<=3 2<=n<=8 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[9s], "chances<=2 chances<=3 visible>=1 visible>=2 visible>=3 suji_visible<=2 suji_visible<=3 in_tehais>=2 suji_in_tehais>=1 suji_in_tehais>=2"]
+[Pai[1m], "visible>=1 visible>=2 visible>=3"]
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"7p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"ryukyoku","reason":"fanpai","tehais":[["2p","2p","9p","9p","1s","2s","3s","4s","4s","4s","8s","8s","8s"],["?","?","?","?","?","?","?","?","?","?","?","?","?"],["9m","9m","7p","8p","9p","1s","2s","3s","5s","5sr","6s","7s","7s"]],"tenpais":[true,false,true],"deltas":[1500,-3000,1500],"scores":[21700,43900,22400]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"start_kyoku","bakaze":"E","kyoku":3,"honba":6,"kyotaku":2,"oya":2,"dora_marker":"7s","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["1p","3p","4p","4p","8p","8p","9p","9p","E","S","S","W","F"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":2,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"4p","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":2,"pai":"4p","consumed":["4p","4p"]}]}
+furo_cand: {"type":"pon","actor":1,"target":2,"pai":"4p","consumed":["4p","4p"]}
+  shanten: 3 -> 2
+  ept: 1139 -> 497
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"E","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"E","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"W","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"nukidora","actor":0,"pai":"N","possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9m","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"1p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"2p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9p","tsumogiri":false,"possible_actions":[{"type":"pon","actor":1,"target":0,"pai":"9p","consumed":["9p","9p"]}]}
+furo_cand: {"type":"pon","actor":1,"target":0,"pai":"9p","consumed":["9p","9p"]}
+  shanten: 3 -> 2
+  ept: 219 -> 0
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"6s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"9m","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"P","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1s","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"1s","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"1s","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"8p","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"F","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"F","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"9m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"9s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"P","possible_actions":[]}
+->	{"type":"dahai","actor":1,"pai":"P","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"P","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"8s","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"reach","actor":0}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"reach_accepted","actor":0,"deltas":[-1000,0,0],"scores":[20700,43900,22400]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"S","possible_actions":[]}
+[Pai[3p], "urasuji early_urasuji chances<=1 chances<=2 chances<=3 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4p], "weak_suji visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8p], "urasuji early_urasuji matagisuji early_matagisuji outer_prereach_sutehai outer_early_sutehai chances<=3 visible>=1 visible>=2 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 in_tehais>=3 +-1_in_prereach_sutehais>=1 +-1_in_prereach_sutehais>=2 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6s], "weak_suji senkisuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 dora +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[S], "tsupai visible>=1 visible>=2 in_tehais>=2 in_tehais>=3 fonpai"]
+->	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"C","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"5p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[]}
+[Pai[3p], "urasuji early_urasuji chances<=1 chances<=2 chances<=3 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4p], "weak_suji visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8p], "suji weak_suji outer_prereach_sutehai outer_early_sutehai chances<=3 visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 in_tehais>=3 +-1_in_prereach_sutehais>=1 +-1_in_prereach_sutehais>=2 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6s], "weak_suji senkisuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 dora +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[S], "tsupai visible>=1 visible>=2 in_tehais>=2 in_tehais>=3 fonpai"]
+[Pai[2s], "urasuji suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+->	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"F","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"1m","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"2s","possible_actions":[]}
+[Pai[3p], "urasuji early_urasuji chances<=1 chances<=2 chances<=3 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4p], "weak_suji visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8p], "suji weak_suji outer_prereach_sutehai outer_early_sutehai chances<=3 visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 in_tehais>=3 +-1_in_prereach_sutehais>=1 +-1_in_prereach_sutehais>=2 +-2_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=2 1_outer_prereach_sutehai 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6s], "weak_suji senkisuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 dora +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[S], "tsupai visible>=1 visible>=2 in_tehais>=2 in_tehais>=3 fonpai"]
+->	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"5p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"P","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"1p","possible_actions":[]}
+[Pai[3p], "urasuji early_urasuji chances<=1 chances<=2 chances<=3 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4p], "weak_suji visible>=1 visible>=2 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6s], "weak_suji senkisuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 dora +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[S], "tsupai visible>=1 visible>=2 in_tehais>=2 in_tehais>=3 fonpai"]
+[Pai[1p], "chances<=3 visible>=1 suji_visible<=3 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+->	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"W","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"7p","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"P","possible_actions":[]}
+[Pai[1p], "chances<=3 visible>=1 suji_visible<=3 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3p], "urasuji early_urasuji chances<=1 chances<=2 chances<=3 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4p], "weak_suji visible>=1 visible>=2 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6s], "weak_suji senkisuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 dora +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[S], "tsupai visible>=1 visible>=2 in_tehais>=2 in_tehais>=3 fonpai"]
+->	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":false}
+<-	{"type":"dahai","actor":1,"pai":"8p","tsumogiri":false}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"C","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":0,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":0,"pai":"4s","tsumogiri":true,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":1,"pai":"9p","possible_actions":[]}
+[Pai[1p], "chances<=3 visible>=1 suji_visible<=3 suji_in_tehais>=1 suji_in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[3p], "urasuji early_urasuji chances<=1 chances<=2 chances<=3 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[4p], "weak_suji visible>=1 visible>=2 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 suji_in_tehais>=1 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[2s], "urasuji chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 in_tehais>=2 +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[6s], "weak_suji senkisuji visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 3<=n<=7 4<=n<=6 in_tehais>=2 same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[8s], "urasuji early_urasuji chances<=2 chances<=3 visible>=1 suji_visible<=0 suji_visible<=1 suji_visible<=2 suji_visible<=3 2<=n<=8 dora +-1_in_prereach_sutehais>=1 +-2_in_prereach_sutehais>=1 1_inner_prereach_sutehai same_type_in_prereach>=1 same_type_in_prereach>=2"]
+[Pai[S], "tsupai visible>=1 visible>=2 in_tehais>=2 in_tehais>=3 fonpai"]
+->	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":true}
+<-	{"type":"dahai","actor":1,"pai":"9p","tsumogiri":true}
+->	{"type":"none"}
+<-	{"type":"tsumo","actor":2,"pai":"?"}
+->	{"type":"none"}
+<-	{"type":"dahai","actor":2,"pai":"1p","tsumogiri":false,"possible_actions":[]}
+->	{"type":"none"}
+<-	{"type":"hora","actor":0,"target":2,"pai":"1p","uradora_markers":["C"],"hora_tehais":["2p","3p","5p","6p","7p","3s","3s","3s","5s","6s","7s","W","W"],"yakus":[["nukidora",3],["reach",1]],"fu":40,"fan":4,"hora_points":8000,"deltas":[12800,0,-9800],"scores":[33500,43900,12600]}
+->	{"type":"none"}
+<-	{"type":"end_kyoku"}
+->	{"type":"none"}
+<-	{"type":"end_game","scores":[33500,43900,12600]}
