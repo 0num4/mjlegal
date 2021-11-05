@@ -42,7 +42,7 @@ class MjaiPossibleActionGenerator :
                 + self.possibleAction.possible_actions_kakan(game_state)
                 + self.possibleAction.possible_actions_daiminkan(game_state)
                 + self.possibleAction.possible_action_dahai(game_state))
-        mjai_possible = [action.to_mjai_json() for action in possible_game_actions]
+        mjai_possible = [action.to_mjai_json() for action in possible_game_actions if action.actor == game_state.player_id]
         return mjai_possible
 
     def possible_game_action_with_reach(self, game_state) :
