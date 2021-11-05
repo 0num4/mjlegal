@@ -42,7 +42,7 @@ class Action :
         if self.tile is not None :
             res["pai"] = self.tile.to_mjai_str()
         if self.consumed is not None :
-            res["consumed"] = [tile.to_str() for tile in self.consumed]
+            res["consumed"] = [tile.to_mjai_str() for tile in self.consumed]
         if self.type == ActionType.DAHAI :
             res["tsumogiri"] = self.tsumogiri
         return res
