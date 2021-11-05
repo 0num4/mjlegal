@@ -229,4 +229,3 @@ class TestPossibleAction(unittest.TestCase) :
         horas_json = json.dumps(horas_mjai)
         expect_json = json.dumps(expect)
         self.assertEqual(horas_json, expect_json)
-        
