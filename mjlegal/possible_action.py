@@ -45,7 +45,7 @@ class PossibleActionGenerator :
     def possible_actions_pon(self, game_state):
         actions = []
         previous_action = game_state.previous_action
-        if previous_action is not None  :
+        if previous_action is not None and game_state.num_pipais > 0 :
             prev_type  = previous_action.type
             prev_actor = previous_action.actor
             if prev_type == ActionType.DAHAI :
@@ -82,7 +82,7 @@ class PossibleActionGenerator :
     def possible_actions_ankan(self, game_state):
         actions = []
         previous_action = game_state.previous_action
-        if previous_action is not None  :
+        if previous_action is not None and game_state.num_pipais > 0 :
             prev_type  = previous_action.type
             if prev_type == ActionType.TSUMO :
                 prev_actor = previous_action.actor
@@ -101,7 +101,7 @@ class PossibleActionGenerator :
     def possible_actions_kakan(self, game_state):
         actions = []
         previous_action = game_state.previous_action
-        if previous_action is not None  :
+        if previous_action is not None and game_state.num_pipais > 0 :
             prev_type  = previous_action.type
             if prev_type == ActionType.TSUMO :
                 prev_actor = previous_action.actor
@@ -119,7 +119,7 @@ class PossibleActionGenerator :
     def possible_actions_daiminkan(self, game_state):
         actions = []
         previous_action = game_state.previous_action
-        if previous_action is not None  :
+        if previous_action is not None and game_state.num_pipais > 0 :
             prev_type  = previous_action.type
             prev_actor = previous_action.actor
             if prev_type == ActionType.DAHAI :
@@ -143,7 +143,7 @@ class PossibleActionGenerator :
     def possible_actions_nukidora(self, game_state):
         actions = []
         previous_action = game_state.previous_action
-        if previous_action is not None  :
+        if previous_action is not None and game_state.num_pipais > 0 :
             prev_type  = previous_action.type
             if prev_type == ActionType.TSUMO :
                 prev_actor = previous_action.actor

@@ -10,13 +10,13 @@ class GameState :
         self.kyoku = 0
         self.honba = 0
         self.chicha = 0 # 常に0
-        self.num_initial_pipais = 0
+        self.init_num_pipais = 108 - (14 + (13 * 3))# 三人麻雀 抜きドラありルール
         self.player_states = []
         self.player_id = -1 # player log
 
     def start_kyoku(self) :
         self.oya = 0
-        self.num_pipais = 0
+        self.num_pipais = self.init_num_pipais
         self.dora_markers = []
         self.previous_action = None
 
