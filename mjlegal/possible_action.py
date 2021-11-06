@@ -53,30 +53,31 @@ class PossibleActionGenerator :
                 other_player_ids = filter(lambda id : id != prev_actor, range(0, game_state.num_players))
                 for id in other_player_ids :
                     player_state = game_state.player_states[id]
-                    tiles = player_state.tiles
-                    consumed_list = []
-                    consumed_tiles = [tile for tile in tiles if tile.equal(prev_dahai, tile, True)]
-                    num_consumed = len(consumed_tiles)
-                    if num_consumed == 3 :
-                        # 手牌に赤ドラを含む場合、2通りのconsumedができる(赤含む、含まない)
-                        exclude_aka = [tile for tile in consumed_tiles if not tile.is_aka]
-                        if len(exclude_aka) == 3 :
-                            consumed_list.append(consumed_tiles[0:2])
-                        else :
-                            consumed_list.append(exclude_aka)
-                            consumed_tiles.remove(prev_dahai)
+                    if not player_state.is_reach :
+                        tiles = player_state.tiles
+                        consumed_list = []
+                        consumed_tiles = [tile for tile in tiles if tile.equal(prev_dahai, tile, True)]
+                        num_consumed = len(consumed_tiles)
+                        if num_consumed == 3 :
+                            # 手牌に赤ドラを含む場合、2通りのconsumedができる(赤含む、含まない)
+                            exclude_aka = [tile for tile in consumed_tiles if not tile.is_aka]
+                            if len(exclude_aka) == 3 :
+                                consumed_list.append(consumed_tiles[0:2])
+                            else :
+                                consumed_list.append(exclude_aka)
+                                consumed_tiles.remove(prev_dahai)
+                                consumed_list.append(consumed_tiles)
+                        elif num_consumed == 2 :
                             consumed_list.append(consumed_tiles)
-                    elif num_consumed == 2 :
-                        consumed_list.append(consumed_tiles)
-                    
-                    for consumed in consumed_list :
-                        pon_action = Action(type = ActionType.PON, 
-                                        actor = id,
-                                        target = prev_actor,
-                                        consumed = consumed,
-                                        tile = prev_dahai
-                                        )
-                        actions.append(pon_action)
+                        
+                        for consumed in consumed_list :
+                            pon_action = Action(type = ActionType.PON, 
+                                            actor = id,
+                                            target = prev_actor,
+                                            consumed = consumed,
+                                            tile = prev_dahai
+                                            )
+                            actions.append(pon_action)
         return actions
 
     def possible_actions_ankan(self, game_state):
@@ -127,17 +128,18 @@ class PossibleActionGenerator :
                 other_player_ids = filter(lambda id : id != prev_actor, range(0, game_state.num_players))
                 for id in other_player_ids :
                     player_state = game_state.player_states[id]
-                    tiles = player_state.tiles
-                    consumed_tiles = [tile for tile in tiles if tile.equal(prev_dahai, tile, True)]
-                    num_consumed = len(consumed_tiles)
-                    if num_consumed == 3 :
-                        kan_action = Action(type = ActionType.DAIMINKAN, 
-                                        actor = id,
-                                        target = prev_actor,
-                                        consumed = consumed_tiles,
-                                        tile = prev_dahai
-                                        )
-                        actions.append(kan_action)
+                    if not player_state.is_reach :
+                        tiles = player_state.tiles
+                        consumed_tiles = [tile for tile in tiles if tile.equal(prev_dahai, tile, True)]
+                        num_consumed = len(consumed_tiles)
+                        if num_consumed == 3 :
+                            kan_action = Action(type = ActionType.DAIMINKAN, 
+                                            actor = id,
+                                            target = prev_actor,
+                                            consumed = consumed_tiles,
+                                            tile = prev_dahai
+                                            )
+                            actions.append(kan_action)
         return actions
 
     def possible_actions_nukidora(self, game_state):
