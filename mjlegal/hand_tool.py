@@ -41,6 +41,9 @@ class HandTool :
             full_tehai136 = TilesUtil.tiles_to_tiles136(full_tehai)
             if len(melds136) == 0 :
                 melds136 = None
+            
+            # FIXME : win_tileを136形式で入力しないといけないため、リストの差分でwin_tileを算出しなおしている。
+            #         冗長な処理が入っていると思われるため直したい。
             win_tile136_list = list(set(tehai136) - set(tiles136))
             dora_ind = TilesUtil.tiles_to_tiles136(game_state.dora_markers)
             is_riichi= player_state.is_reach
