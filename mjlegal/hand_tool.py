@@ -53,8 +53,8 @@ class HandTool :
                                                 is_ippatsu = False,  # TODO ippatsu
                                                 is_rinshan = is_rinshan,
                                                 is_chankan = False, # TODO chankan
-                                                is_haitei  = False, # TODO haitei
-                                                is_houtei  = False, # TODO houtei
+                                                is_haitei  = is_tsumo and game_state.num_pipais == 0,
+                                                is_houtei  = not(is_tsumo) and game_state.num_pipais == 0,
                                                 is_daburu_riichi = False, # TODO double reach
                                                 is_nagashi_mangan = False, # TODO nagashi mangan
                                                 is_tenhou = False, # TODO tenhou
