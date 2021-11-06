@@ -25,9 +25,16 @@ class HandTool :
         if player_state.tsumo_tile is None :
             full_tehai.append(win_tile)
         
-        tiles34 = TilesUtil.tiles_to_tiles34(tehai)
+        tehais34 = TilesUtil.tiles_to_tiles34(tehai)
+        
+        if is_tsumo : 
+            tiles34 = TilesUtil.tiles_to_tiles34(tiles)
+            machi_tiles34 = self.get_machi_tiles34(tiles34)
+            if self.is_furiten(game_state, actor, machi_tiles34) :
+                return False # furiten
+
         is_agari = False
-        if self.agari.is_agari(tiles34) :
+        if self.agari.is_agari(tehais34) :
             tiles136 = TilesUtil.tiles_to_tiles136(tiles)
             tehai136 = TilesUtil.tiles_to_tiles136(tehai)
             melds136 = player_state.melds136
@@ -57,6 +64,15 @@ class HandTool :
             # print(hand_value.cost)
             is_agari = hand_value.cost is not None
         return is_agari
+
+    def is_furiten(self, game_state, actor, machi_tiles34) :
+        player_state = game_state.player_states[actor]
+        sutehais = player_state.sutehais
+        missed_hai = [player.sutehais[-1] for player in game_state.player_states if len(player.sutehais) > 0]
+        furiten_tiles =  sutehais + missed_hai
+        furiten_tiles34 = TilesUtil.tiles_to_tiles34(furiten_tiles)
+        is_furiten = any(machi * furiten != 0 for machi, furiten in zip(machi_tiles34, furiten_tiles34))
+        return is_furiten
 
     def get_tenpai_tiles(self, tiles) :
         if TilesUtil.include_closed_tile(tiles) :
