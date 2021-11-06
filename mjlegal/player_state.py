@@ -24,6 +24,7 @@ class PlayerState :
         self.prev_action = None
         self.melds = []
         self.tsumo_tile = None
+        self.extra_anpais = [] # sutehais以外のこのプレーヤに対する安牌
     
     @property
     def is_reach(self) :

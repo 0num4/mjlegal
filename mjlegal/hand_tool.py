@@ -27,7 +27,7 @@ class HandTool :
         
         tehais34 = TilesUtil.tiles_to_tiles34(tehai)
         
-        if is_tsumo : 
+        if not is_tsumo : 
             tiles34 = TilesUtil.tiles_to_tiles34(tiles)
             machi_tiles34 = self.get_machi_tiles34(tiles34)
             if self.is_furiten(game_state, actor, machi_tiles34) :
@@ -71,10 +71,9 @@ class HandTool :
     def is_furiten(self, game_state, actor, machi_tiles34) :
         player_state = game_state.player_states[actor]
         sutehais = player_state.sutehais
-        missed_hai = [player.sutehais[-1] for player in game_state.player_states if len(player.sutehais) > 0]
-        furiten_tiles =  sutehais + missed_hai
-        furiten_tiles34 = TilesUtil.tiles_to_tiles34(furiten_tiles)
-        is_furiten = any(machi * furiten != 0 for machi, furiten in zip(machi_tiles34, furiten_tiles34))
+        anpai_tiles =  sutehais + player_state.extra_anpais
+        anpai_tiles34 = TilesUtil.tiles_to_tiles34(anpai_tiles)
+        is_furiten = any(machi * furiten != 0 for machi, furiten in zip(machi_tiles34, anpai_tiles34))
         return is_furiten
 
     def get_tenpai_tiles(self, tiles) :

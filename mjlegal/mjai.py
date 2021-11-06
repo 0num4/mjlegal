@@ -10,6 +10,15 @@ class MjaiLoader :
         self.reach_dahai = False # 次の打牌が立直宣言牌
         
     def action(self, action) :
+        if self.game.previous_action is not None :
+            previous_action = self.game.previous_action
+            if previous_action.type in (ActionType.DAHAI, ActionType.KAKAN) :
+                prev_actor = previous_action.actor
+                prev_tile = previous_action.tile
+                other_player_ids = filter(lambda id : id != prev_actor, range(0, self.game.num_players))
+                for id in other_player_ids :
+                    self.game.player_states[id].extra_anpais.append(prev_tile)
+
         action_type = action["type"]
         if action_type == "start_game" :
             self.game = GameState()
@@ -42,6 +51,7 @@ class MjaiLoader :
                 pai = action["pai"]
                 tile = Tile.from_str(pai)
                 self.game.previous_action = player_state.dahai(pai, self.reach_dahai)
+                player_state.extra_anpais.clear()
                 # self.game.previous_action = Action(type = ActionType.DAHAI, actor = action_actor, tile=tile)
                 self.reach_dahai = False
             elif action_type == "pon" :
