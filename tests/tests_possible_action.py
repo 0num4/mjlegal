@@ -260,7 +260,4 @@ class TestPossibleAction(unittest.TestCase) :
         horas_json = json.dumps(horas_mjai)
         expect_json = json.dumps(expect)
         self.assertEqual(horas_json, expect_json)
-        hand = HandTool()
-        player_state = game_state.player_states[0]
-        tiles = player_state.tiles
         
