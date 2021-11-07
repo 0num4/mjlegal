@@ -42,7 +42,8 @@ class MjaiPossibleActionGenerator :
         return possible_actions
 
     def possible_game_action_dahai_turn(self, game_state) :
-        possible_game_actions = (self.possibleAction.possible_actions_hora(game_state) 
+        possible_game_actions = (self.possibleAction.possible_actions_hora(game_state)
+                + self.possibleAction.possible_actions_ryukyoku(game_state)
                 + self.possibleAction.possible_actions_nukidora(game_state)
                 + self.possibleAction.possible_actions_ankan(game_state)
                 + self.possibleAction.possible_actions_kakan(game_state)

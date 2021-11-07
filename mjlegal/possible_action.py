@@ -17,7 +17,8 @@ class PossibleActionGenerator :
                 + self.possible_actions_kakan(game_state)
                 + self.possible_actions_daiminkan(game_state)
                 + self.possible_action_dahai(game_state)
-                + self.possible_actions_dahai_with_reach(game_state) )
+                + self.possible_actions_dahai_with_reach(game_state)
+                + self.possible_actions_ryukyoku(game_state) )
         return actions
         
     def possible_action_dahai(self, game_state) :
@@ -200,4 +201,21 @@ class PossibleActionGenerator :
                                 tile = previous_action.tile)
                     actions.append(hora_action)
         return actions
+
+    def possible_actions_ryukyoku(self, game_state) :
+        actions = []
+        previous_action = game_state.previous_action
+        if previous_action is not None  :
+            prev_type  = previous_action.type
+            if prev_type == ActionType.TSUMO :
+                prev_actor = previous_action.actor
+                prev_actor_state = game_state.player_states[prev_actor]
+                if len(prev_actor_state.sutehais) == 0 and prev_actor_state.is_menzen: #first turn
+                    tehai = prev_actor_state.tehai
+                    if len( set(tile.to_str() for tile in tehai if tile.is_yaochu) ) >= 9 :
+                        kyusyukyuhai_action = Action(type = ActionType.RYUKYOKU, actor = prev_actor)
+                        actions.append(kyusyukyuhai_action)
+
+        return actions
+
 

@@ -13,6 +13,7 @@ class ActionType(Enum) :
     DAIMINKAN = "daiminkan"
     NUKI = "nukidora"
     HORA = "hora"
+    RYUKYOKU = "ryukyoku"
 
 class Tile :
     # const
@@ -29,6 +30,10 @@ class Tile :
     def to_mjai_str(self) :
         s = self.to_str()
         return Tile.LOOKUP_MSPZ_PAI_NAME_TABLE[s] if s in Tile.LOOKUP_MSPZ_PAI_NAME_TABLE else s
+
+    @property
+    def is_yaochu(self) :
+        return self.number == 1 or self.number == 9 or self.suit == 'z'
 
     def __str__(self):
         return self.to_str()
