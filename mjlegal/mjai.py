@@ -44,8 +44,8 @@ class MjaiLoader :
             if action_type == "tsumo" :
                 pai = action["pai"]
                 tile = Tile.from_str(pai)
+                self.game.tsumo()
                 self.game.previous_action = player_state.tsumo(pai)
-                self.game.num_pipais -= 1
                 # self.game.previous_action = Action(type = ActionType.TSUMO, actor = action_actor, tile=tile)
             elif action_type == "dahai" :
                 pai = action["pai"]

@@ -1,3 +1,4 @@
+from .mjtypes import Tile
 
 class GameState :
     
@@ -19,6 +20,11 @@ class GameState :
         self.num_pipais = self.init_num_pipais
         self.dora_markers = []
         self.previous_action = None
+
+    def tsumo(self) :
+        self.num_pipais = self.num_pipais - 1
+        assert self.num_pipais >= 0, "pipai is empty."
+        return Tile.from_str("?")
 
     @property
     def num_players(self) :
