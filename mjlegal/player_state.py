@@ -9,7 +9,7 @@ from .action import Action
 class PlayerState :
     def __init__(self) :
         self.name = "mjlegal_player"
-        self.score = 25000
+        self.score = 35000
         self.kyoku_reset()
 
     def kyoku_reset(self) :
