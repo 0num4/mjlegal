@@ -86,7 +86,8 @@ class PlayerState :
     def full_tehai(self) :
         tehai = self.tehai[:]
         if len(self.melds) > 0 :
-            meld_tiles = sum([meld.tiles for meld in self.melds if meld.is_opened], [])
+            # meld_tiles = sum([meld.tiles for meld in self.melds if meld.is_opened], [])
+            meld_tiles = sum([meld.tiles[:3] for meld in self.melds if meld.type != ActionType.NUKI], [])
             tehai += meld_tiles
         return tehai
 
