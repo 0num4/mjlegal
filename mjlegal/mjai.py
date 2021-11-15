@@ -17,7 +17,8 @@ class MjaiLoader :
                 prev_tile = previous_action.tile
                 other_player_ids = filter(lambda id : id != prev_actor, range(0, self.game.num_players))
                 for id in other_player_ids :
-                    self.game.player_states[id].extra_anpais.append(prev_tile)
+                    if len(self.game.player_states[id].extra_anpais) > 0 and self.game.player_states[id].extra_anpais[-1] != prev_tile :
+                        self.game.player_states[id].extra_anpais.append(prev_tile)
 
         action_type = action["type"]
         if action_type == "start_game" :
