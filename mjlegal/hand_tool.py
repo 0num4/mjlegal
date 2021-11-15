@@ -35,16 +35,13 @@ class HandTool :
 
         is_agari = False
         if self.agari.is_agari(tehais34) :
-            tiles136 = TilesUtil.tiles_to_tiles136(tiles)
             tehai136 = TilesUtil.tiles_to_tiles136(tehai)
             melds136 = player_state.melds136
             full_tehai136 = TilesUtil.tiles_to_tiles136(full_tehai)
             if len(melds136) == 0 :
                 melds136 = None
             
-            # FIXME : win_tileを136形式で入力しないといけないため、リストの差分でwin_tileを算出しなおしている。
-            #         冗長な処理が入っていると思われるため直したい。
-            win_tile136_list = list(set(tehai136) - set(tiles136))
+            win_tile136 = tehai136[-1]
             dora_ind = TilesUtil.tiles_to_tiles136(game_state.dora_markers)
             is_riichi= player_state.is_reach
             player_wind = game_state.player_wind(actor)
@@ -62,7 +59,7 @@ class HandTool :
                                                 is_chiihou = False, # TODO chiihou
                                                 player_wind = HandTool.WINDS[player_wind],
                                                 round_wind = HandTool.WINDS[game_state.bakaze])
-            hand_value = self.hand.estimate_hand_value(tiles = full_tehai136, win_tile = win_tile136_list[0],
+            hand_value = self.hand.estimate_hand_value(tiles = full_tehai136, win_tile = win_tile136,
                                             melds = melds136, dora_indicators = dora_ind, config = hand_config)
             # print(hand_value.cost)
             is_agari = hand_value.cost is not None
