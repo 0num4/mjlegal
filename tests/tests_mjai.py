@@ -89,6 +89,9 @@ class TestMjaiLoader(unittest.TestCase) :
     def test_mjai_load_1(self) :
         test_mjai_load("./tests/test_data/test_mjson_1.mjson")
 
+    def test_mjai_load_2(self) :
+        test_mjai_load("./tests/test_data/test_mjson_2.mjson")
+
     def test_player_mjai_log_load_0(self) :
         test_mjai_player_records('./tests/test_data/test_mjai_player_log_01.txt')
 
