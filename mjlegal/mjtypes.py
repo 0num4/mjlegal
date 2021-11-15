@@ -145,7 +145,7 @@ class TilesUtil :
             else :
                 num_offset = offset + (tile_obj.number - 1) * 4
                 num_offset_end = num_offset + 4
-                if tile_obj.number == 5 :
+                if tile_obj.number == 5 and tile_obj.suit != "z":
                     num_offset = num_offset + 1
                 count = sum(num_offset <= tile and tile < num_offset_end for tile in result_tiles136)
             
