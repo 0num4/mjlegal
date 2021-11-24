@@ -283,3 +283,26 @@ class TestPossibleAction(unittest.TestCase) :
         horas_json = json.dumps(horas_mjai)
         expect_json = json.dumps(expect)
         self.assertEqual(horas_json, expect_json)
+
+    def test_possible_actions_dahai_after_reach(self) :
+        mjai_log = [{"type":"start_game","names":["shanten","shanten","shanten"]},
+                    {"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"8p","tehais":[["1m","2m","3m","4p","0p","6p","5s","7s","8s","E","E","E","C"],["9m","1p","2p","3s","3s","3s","7s","8s","9s","S","W","P","P"],["1m","1p","4p","6p","7p","1s","2s","4s","4s","7s","7s","S","S"]]},
+                    {"type":"tsumo","actor":0,"pai":"C"},
+                    {"type":"reach","actor":0},
+                    {"type": "dahai", "actor": 0, "pai": "5s", "tsumogiri": False},
+                    {"type":"reach_accepted","actor":2,"deltas":[0,0,-1000],"scores":[30000,30000,29000]},
+                    {"type":"tsumo","actor":1,"pai":"1m"},
+                    {"type":"dahai","actor":1,"pai":"1m" ,"tsumogiri" : True},
+                    {"type":"tsumo","actor":2,"pai":"9m"},
+                    {"type":"dahai","actor":2,"pai":"9m" ,"tsumogiri" : True},
+                    {"type":"tsumo","actor":0,"pai":"C"}
+                    ]
+        game_state = loadGameStateFromMjai(mjai_log)
+
+        pag = PossibleActionGenerator()
+        reach_dahai = pag.possible_game_actions(game_state)
+        expect = [{"type": "dahai", "actor": 0, "pai": "7z", "tsumogiri": True}] 
+        dahais_mjai = [act.to_mjai() for act in reach_dahai]
+        dahais_json = json.dumps(dahais_mjai)
+        expect_json = json.dumps(expect)
+        self.assertEqual(dahais_json, expect_json)

@@ -29,17 +29,22 @@ class PossibleActionGenerator :
             if prev_type in (ActionType.TSUMO, ActionType.PON, ActionType.CHI) :
                 prev_actor = previous_action.actor
                 prev_actor_state = game_state.player_states[prev_actor]
-                dahais = prev_actor_state.tiles
-                if prev_type == ActionType.PON :
-                    prev_pon = prev_actor_state.melds[-1]
-                    dahais = [tile for tile in dahais if not(Tile.equal(tile, prev_pon.tiles[0], True))]
-                elif prev_type == ActionType.CHI :
-                    pass # TODO チーの喰い変え動作
-                actions = [Action(type = ActionType.DAHAI, actor = prev_actor, tile = tile) for tile in dahais]
-                if prev_actor_state.tsumo_tile :
-                    tsumogiri_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
-                                        tile = prev_actor_state.tsumo_tile, tsumogiri = True)
+                if prev_actor_state.is_reach and prev_type == ActionType.TSUMO:
+                    tsumogiri_action = tsumogiri_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
+                                            tile = prev_actor_state.tsumo_tile, tsumogiri = True)
                     actions.append(tsumogiri_action)
+                else :
+                    dahais = prev_actor_state.tiles
+                    if prev_type == ActionType.PON :
+                        prev_pon = prev_actor_state.melds[-1]
+                        dahais = [tile for tile in dahais if not(Tile.equal(tile, prev_pon.tiles[0], True))]
+                    elif prev_type == ActionType.CHI :
+                        pass # TODO チーの喰い変え動作
+                    actions = [Action(type = ActionType.DAHAI, actor = prev_actor, tile = tile) for tile in dahais]
+                    if prev_actor_state.tsumo_tile :
+                        tsumogiri_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
+                                            tile = prev_actor_state.tsumo_tile, tsumogiri = True)
+                        actions.append(tsumogiri_action)
         #TODO 重複アクション削除
         return actions
 
