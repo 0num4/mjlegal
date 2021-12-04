@@ -10,6 +10,9 @@ class MjaiLoader :
         self.reach_dahai = False # 次の打牌が立直宣言牌
         
     def action(self, action) :
+        # FIXME : MjaiPossibleActionとPossibleActionが使用するprevious actionが異なっている。
+        self.game.mjai_previous_action = action
+
         if self.game.previous_action is not None :
             previous_action = self.game.previous_action
             if previous_action.type in (ActionType.DAHAI, ActionType.KAKAN) :
