@@ -21,3 +21,4 @@ error_kyoku.yaml
 config.yaml
 cache/*
 .cache
+tests/test_data/expect
