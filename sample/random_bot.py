@@ -47,7 +47,7 @@ class RandomBot :
             self.mjaiPlayerLoader.action_receive(event)
             
             # Get possible moves
-            possible_actions = self.mjaiPossibleActionGenerator.possible_mjai_action(self.mjaiPlayerLoader.game, event)
+            possible_actions = self.mjaiPossibleActionGenerator.possible_mjai_action(self.mjaiPlayerLoader.game)
             
             # Choice a random move
             move = random.choice(possible_actions)

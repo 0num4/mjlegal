@@ -67,7 +67,7 @@ def test_generate_mjai_player(player_id, mjson_filename, expect_filename) :
         mjl.action(record)
         if record["type"] == "start_kyoku" :
             mjl.game.player_id = player_id
-        possible_action = mjaiPossibleActionGenerator.possible_mjai_action(mjl.game, record)
+        possible_action = mjaiPossibleActionGenerator.possible_mjai_action(mjl.game)
         possible_actions.append(possible_action)
     save_expect_actions(expect_filename, possible_actions)
 
@@ -81,7 +81,7 @@ def test_mjai_player(player_id, mjson_filename, expect_filename) :
         mjl.action(record)
         if record["type"] == "start_kyoku" :
             mjl.game.player_id = player_id
-        possible_action = mjaiPossibleActionGenerator.possible_mjai_action(mjl.game, record)
+        possible_action = mjaiPossibleActionGenerator.possible_mjai_action(mjl.game)
         assert json.dumps(expect) == json.dumps(possible_action)
 
 class TestRegression(unittest.TestCase) :
