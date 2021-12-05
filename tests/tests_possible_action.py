@@ -135,8 +135,8 @@ class TestPossibleAction(unittest.TestCase) :
 
         game_state = loadGameStateFromMjai(mjai_log)
         pag = PossibleActionGenerator()
-        kans = pag.possible_actions_daiminkan(game_state)
-        expect = [{"type": "daiminkan", "actor": 2, "target": 0, "pai": "5p", "consumed": ["5p", "5p", "5pr"]}]
+        kans = pag.possible_game_actions(game_state)
+        expect = [{"type": "pon", "actor": 2, "target": 0, "pai": "5p", "consumed": ["5p", "5p"]}, {"type": "pon", "actor": 2, "target": 0, "pai": "5p", "consumed": ["5p", "5pr"]},{"type": "daiminkan", "actor": 2, "target": 0, "pai": "5p", "consumed": ["5p", "5p", "5pr"]}]
 
         kans_mjai = [act.to_mjai() for act in kans]
         kans_json = json.dumps(kans_mjai)
