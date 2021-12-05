@@ -43,6 +43,12 @@ class MjaiLoader :
                 self.game.player_states[id].tiles = TilesUtil.tiles_str_array_to_tiles(tehai)
         elif action_type == "dora" :
             self.game.dora_markers.append(Tile.from_str(action["dora_marker"]))
+        elif action_type == "hora" :
+            if "scores" in action :
+                self.game.set_scores(action["scores"])
+        elif action_type == "ryukyoku" :
+            if "scores" in action :
+                self.game.set_scores(action["scores"])
         elif "actor" in action :
             action_actor = action["actor"]
             player_state = self.game.player_states[action_actor]
