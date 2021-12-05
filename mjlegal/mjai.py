@@ -26,19 +26,21 @@ class MjaiLoader :
         action_type = action["type"]
         if action_type == "start_game" :
             self.game = GameState()
+            self.game.player_states = []
+            for id, name in enumerate(action["names"]) :
+                player_state = PlayerState()
+                player_state.player_id = id
+                player_state.name = name
+                self.game.player_states.append(player_state)
         elif action_type == "start_kyoku" :
             self.game.start_kyoku()
             self.game.bakaze = action["bakaze"]
             self.game.kyoku = action["kyoku"]
             self.game.oya = action["oya"]
             self.game.dora_markers.append(Tile.from_str(action["dora_marker"]))
-
-            self.game.player_states = []
             for id, tehai in enumerate(action["tehais"]) :
-                player_state = PlayerState()
-                player_state.player_id = id
-                player_state.tiles = TilesUtil.tiles_str_array_to_tiles(tehai)
-                self.game.player_states.append(player_state)
+                self.game.player_states[id].kyoku_reset()
+                self.game.player_states[id].tiles = TilesUtil.tiles_str_array_to_tiles(tehai)
         elif action_type == "dora" :
             self.game.dora_markers.append(Tile.from_str(action["dora_marker"]))
         elif "actor" in action :
