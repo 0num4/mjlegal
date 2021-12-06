@@ -171,7 +171,7 @@ class PossibleActionGenerator :
             if prev_type == ActionType.TSUMO :
                 prev_actor = previous_action.actor
                 prev_actor_state = game_state.player_states[prev_actor]
-                if not(prev_actor_state.is_reach) and prev_actor_state.is_menzen and prev_actor_state.score >= 1000:
+                if not(prev_actor_state.is_reach) and prev_actor_state.is_menzen and prev_actor_state.score >= 1000 and game_state.num_pipais >= game_state.num_players :
                     tiles = prev_actor_state.tehai
                     tenpai_dahais = self.hand_tool.get_tenpai_tiles(tiles)
                     for dahai in tenpai_dahais :
