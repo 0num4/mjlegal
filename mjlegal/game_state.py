@@ -56,6 +56,6 @@ class GameState :
 
     def player_wind(self, player_id) :
         winds = ["E", "S", "W", "N"]
-        return winds[(player_id + self.oya) % 4]
+        return winds[(player_id - self.oya + 3) % 3]
 
     
