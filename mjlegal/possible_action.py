@@ -173,11 +173,11 @@ class PossibleActionGenerator :
                 prev_actor_state = game_state.player_states[prev_actor]
                 if not(prev_actor_state.is_reach) and prev_actor_state.is_menzen and prev_actor_state.score >= 1000 and game_state.num_pipais >= game_state.num_players :
                     tiles = prev_actor_state.tehai
-                    tenpai_dahais = self.hand_tool.get_tenpai_tiles(tiles)
-                    for dahai in tenpai_dahais :
-                        reach_dahai_action = Action(type = ActionType.DAHAI, actor = prev_actor, 
-                                    tile = dahai, tsumogiri = (prev_actor_state.tsumo_tile == dahai), reach_decleared = True)
-                        actions.append(reach_dahai_action)
+                    tenpai_tiles = self.hand_tool.get_tenpai_tiles(tiles)
+                    all_dahais = self.possible_action_dahai(game_state)
+                    for dahai in all_dahais :
+                        if dahai.tile in tenpai_tiles :
+                            actions.append(dahai)
         return actions
 
     def possible_actions_hora(self, game_state):
