@@ -306,3 +306,17 @@ class TestPossibleAction(unittest.TestCase) :
         dahais_json = json.dumps(dahais_mjai)
         expect_json = json.dumps(expect)
         self.assertEqual(dahais_json, expect_json)
+
+    def test_tile_aka_pon(self) :
+        mjai_log = [{"type":"start_game","names":["shanten","shanten","shanten"]},
+                    {"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"8p",
+                        "tehais":[["9m","1p","4p","0p","8p","9p","1s","2s","4s","5s","E","F","C"],
+                                  ["9m","1p","2p","3s","3s","3s","7s","8s","9s","S","W","P","P"],
+                                  ["1m","1p","5p","5p","5p","1s","2s","4s","4s","7s","7s","S","S"]]},
+                    {"type":"tsumo","actor":0,"pai":"8s"},
+                    {"type":"dahai","actor":0,"pai":"0p","tsumogiri":False},
+                    {"type": "pon", "actor": 2, "target": 0, "pai": "0p", "consumed": ["5p", "5p"]}]
+
+        game_state = loadGameStateFromMjai(mjai_log)
+        self.assertEqual(game_state.player_states[2].melds[0].tiles, TilesUtil.tiles_str_array_to_tiles(["5p", "5p", "0p"]))
+

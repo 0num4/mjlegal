@@ -124,8 +124,8 @@ class PlayerState :
     def pon(self, pai, consumed, from_id):
         consumed_tiles = [Tile.from_str(ts) for ts in consumed]
         tile = Tile.from_str(pai)
-        for tile in consumed_tiles :
-            self.remove_tile(tile)
+        for t in consumed_tiles :
+            self.remove_tile(t)
 
         meld = Meld(meld_type=Meld.PON, tiles=consumed_tiles + [tile], from_who=from_id)
         self.melds.append(meld)
@@ -135,8 +135,8 @@ class PlayerState :
     def chi(self, pai, consumed, from_id) :
         consumed_tiles = [Tile.from_str(ts) for ts in consumed]
         tile = Tile.from_str(pai)
-        for tile in consumed_tiles :
-            self.remove_tile(tile)
+        for t in consumed_tiles :
+            self.remove_tile(t)
 
         meld = Meld(meld_type=Meld.CHI, tiles=consumed_tiles + [tile], from_who=from_id)
         self.melds.append(meld)
@@ -170,8 +170,8 @@ class PlayerState :
     def daiminkan(self, pai, consumed, from_id):
         consumed_tiles = [Tile.from_str(ts) for ts in consumed]
         tile = Tile.from_str(pai)
-        for tile in consumed_tiles :
-            self.remove_tile(tile)
+        for t in consumed_tiles :
+            self.remove_tile(t)
 
         meld = Meld(meld_type=Meld.DAIMINKAN, tiles=consumed_tiles + [tile], from_who=from_id)
         self.melds.append(meld)
