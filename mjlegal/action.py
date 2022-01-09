@@ -13,6 +13,7 @@ class Action :
     tsumogiri : bool = False
     rinshan   : bool = False
     reach_decleared : bool = False
+    reason : str = None
 
     # FIXME 関数名に反して、本APIはmjai形式でないpaiを返す。既存のテストを壊さないため、本来のmjai形式変換はto_mjai_jsonに実装。
     def to_mjai(self) :
@@ -30,6 +31,8 @@ class Action :
             res["tsumogiri"] = self.tsumogiri
         if self.type == ActionType.TSUMO :
             res["rinshan"] = self.rinshan
+        if self.reason is not None :
+            res["reason"] = self.reason
         return res
     
     def to_mjai_json(self) :
@@ -45,6 +48,8 @@ class Action :
             res["consumed"] = [tile.to_mjai_str() for tile in self.consumed]
         if self.type == ActionType.DAHAI :
             res["tsumogiri"] = self.tsumogiri
+        if self.reason is not None :
+            res["reason"] = self.reason
         return res
 
     def to_str(self) :

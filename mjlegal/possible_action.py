@@ -218,7 +218,7 @@ class PossibleActionGenerator :
                 if len(prev_actor_state.sutehais) == 0 and prev_actor_state.is_menzen: #first turn
                     tehai = prev_actor_state.tehai
                     if len( set(tile.to_str() for tile in tehai if tile.is_yaochu) ) >= 9 :
-                        kyusyukyuhai_action = Action(type = ActionType.RYUKYOKU, actor = prev_actor)
+                        kyusyukyuhai_action = Action(type = ActionType.RYUKYOKU, actor = prev_actor, reason = "kyushukyuhai")
                         actions.append(kyusyukyuhai_action)
 
         return actions
