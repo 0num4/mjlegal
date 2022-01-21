@@ -127,24 +127,24 @@ class TestRegression(unittest.TestCase) :
 
 
 if __name__ == '__main__':
-    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_0.mjson")
-    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_1.mjson")
-    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_2.mjson")
-    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_3.mjson")
+    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_0.mjson")
+    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_1.mjson")
+    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_2.mjson")
+    test_generate_expected(TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_3.mjson")
 
-    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_0_player_0.mjson")
-    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_0_player_1.mjson")
-    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_0_player_2.mjson")
+    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_0_player_0.mjson")
+    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_0_player_1.mjson")
+    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_0.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_0_player_2.mjson")
     
-    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_1_player_0.mjson")
-    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_1_player_1.mjson")
-    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_1_player_2.mjson")
+    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_1_player_0.mjson")
+    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_1_player_1.mjson")
+    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_1.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_1_player_2.mjson")
     
-    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_2_player_0.mjson")
-    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_2_player_1.mjson")
-    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_2_player_2.mjson")
+    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_2_player_0.mjson")
+    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_2_player_1.mjson")
+    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_2.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_2_player_2.mjson")
     
-    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_3_player_0.mjson")
-    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_3_player_1.mjson")
-    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "expect/test_expect_3_player_2.mjson")
+    test_generate_mjai_player(0, TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_3_player_0.mjson")
+    test_generate_mjai_player(1, TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_3_player_1.mjson")
+    test_generate_mjai_player(2, TEST_DATA_DIR_PATH + "test_mjson_3.mjson", TEST_DATA_DIR_PATH + "../expect/test_expect_3_player_2.mjson")
     
