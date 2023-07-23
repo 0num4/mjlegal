@@ -2,9 +2,10 @@ from .possible_action import PossibleActionGenerator
 
 class MjaiPossibleActionGenerator :
     
-    def __init__(self) :
+    def __init__(self, name = "mjlegal", room = "default") :
         self.possibleAction = PossibleActionGenerator()
-        self.name = "mjlegal"
+        self.name = name
+        self.room = room
 
     # "dummy" is unused argument.
     def possible_mjai_action(self, game_state, dummy = None) :
@@ -13,7 +14,7 @@ class MjaiPossibleActionGenerator :
             previous_mjai_action = game_state.mjai_previous_action
             action_type = previous_mjai_action["type"]
             if action_type == "hello" :
-                join_action = {"type" : "join", "name" : self.name, "room" : "default"}
+                join_action = {"type" : "join", "name" : self.name, "room" : self.room}
                 possible_actions.append(join_action)
             elif action_type in ("start_game", "start_kyoku", "reach_accepted", "dora", "hora", "ryukyoku", "end_kyoku", "end_game") :
                 none_action = {"type" : "none"}
